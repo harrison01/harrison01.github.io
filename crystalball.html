@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CrystalBall</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body onload="var slideshow = remark.create();">
+    <textarea id="source">
+
+class: center, middle
+
+# CrystalBall
+
+---
+
+# Agenda
+
+1. On SAT Solvers 
+
+2. CrystalBall's Aim and Engineering
+
+3. CryptoMiniSAT's code
+
+---
+
+# On SAT Solvers
+
+- CDCL based Solvers
+
+    - Issues
+
+    - Heueristics
+
+       - Branchings
+        
+       - Memory Management
+
+       - Restarts
+    
+    - MiniSAT
+
+        - Activity
+
+    - MapleSAT
+
+        - Tier-ed Architecture
+    
+---
+
+# CrystalBall (v1)
+
+1. `"lifespan"` of a learnt clause.
+
+   - Look into SAT Solver for `genesis`
+
+   - Look into DRAT-proof for `expiry`
+
+2. Other Features that may be explored
+    
+   - Branchings
+
+   - Restarts
+---
+
+# CrystalBall (v1) - Engineering
+
+### Features
+
+212 Features
+
+- Global
+   - Property of CNF formuls
+   
+- Contextual
+   - 
+- Restarts
+
+- Performance
+
+
+Normalization
+
+---
+
+# CrystalBall (v1) - Engineering
+
+1. Forward and Backward Pass
+    - Different Proof trees
+    - 99% needed to be removed, DRAT removes 50%
+
+2. SQLite for storing data 
+
+3. DRAT-trim for data collection
+    
+   - modification
+
+---
+
+# CrystalBall (v1) - Engineering
+
+### "What is a good measure to predict?"
+
+Inference Engine
+        
+   - Classification using Random Forest 
+
+   - Feature Ranking
+
+        
+---
+
+# Findings
+
+`"glue"`
+
+# Future
+
+Restart and Branching Predictions
+
+
+---
+
+class: center, middle
+
+# Looking into CryptoMiniSAT
+
+---
+# MiniSAT
+
+MiniSAT was a extensible SAT solver.
+
+Has smart engineering of
+   - Representation
+   - Inference 
+   - Search
+
+New Constraints
+
+Watched Literals
+
+Activity Heueristics
+   - Bump and decay
+    
+---
+
+# CryptoMiniSAT
+
+An extension from MiniSAT for Cryptographic uses.
+
+   - XOR support using Gaussian Eleminitation
+    
+   - Also for Good general purpose support
+    
+
+Code
+
+   - Discussing major things
+       - As a CDCL solver 
+        
+   - Skipping "Crypto" Section
+
+
+---
+
+- `main()` uses instance of class `Solver` (in `cryptominisat.cpp`) 
+
+- `Solver` uses the class `Clause` (in `clause.h`)
+
+- `Clause` has things like
+ 
+   - `clause_new` (in `clauseallocator.h`)
+   
+- `Solver` has other important things like (in `propengine.h`):
+   
+   - A propagataion queue.
+   
+   - `propagate()` - propagate all enqueued facts 
+   
+   - `enqueue()` - puts things in propagation queue
+   
+   - `analyze()` - analyzes conflicts and generates reason clause
+    
+---
+
+Solver States
+
+Clauses
+
+```cpp
+
+Clause* Solver::add_clause_int(
+    const vector<Lit>& lits
+    , const bool red
+    , ClauseStats cl_stats
+    , const bool attach_long
+    , vector<Lit>* finalLits
+    , bool addDrat
+    , const Lit drat_first
+    , const bool sorted
+) 
+
+```
+
+
+---
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
