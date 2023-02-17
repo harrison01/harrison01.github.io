@@ -16,28 +16,28 @@ var SPACE = '&nbsp;';
 
 var // Boolean variables for checkboxes
 
-Func     = false;           // Concept constructions:
-NRestr   = false;
-QNRestr  = false;
-Nominals = false;
+// Func     = false;           // Concept constructions:
+// NRestr   = false;
+// QNRestr  = false;
+// Nominals = false;
 
-RInver= false;              // Role constructions:
+// RInver= false;              // Role constructions:
 
-RInter= false;
-RUnion= false;
-RCompl= false;
-RComplAtomic=false;
-RComplFull=false;
-RCompo= false;
-RStar = false;
-idC   = false;
+// RInter= false;
+// RUnion= false;
+// RCompl= false;
+// RComplAtomic=false;
+// RComplFull=false;
+// RCompo= false;
+// RStar = false;
+// idC   = false;
 
-BRinN = false;
+// BRinN = false;
 
-AxTrans  = false;           // Additional axioms
-AxHierar = false;
-AxCRI    = false; // Complex Role Inclusions
-AxMisc   = false; // Reflexivity, Irreflexivity, etc.
+// AxTrans  = false;           // Additional axioms
+// AxHierar = false;
+// AxCRI    = false; // Complex Role Inclusions
+// AxMisc   = false; // Reflexivity, Irreflexivity, etc.
 
 EmptyTB = "NoTBox";         // TBox options
 AcyclTB = "AcyclicTBox";

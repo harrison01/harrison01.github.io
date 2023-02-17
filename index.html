@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head>
-<title>Description Logic Complexity Navigator (by Yash Pote)</title>
+<title> Models of Distribution Tesing  (by Yash Pote)</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 <meta http-equiv="Content-Style-Type" content="text/css">
@@ -14,7 +14,7 @@
 <meta name="keywords" content="reasoning, concept satisfiability, concept subsumption, knowledge base, TBox consistency, ABox satisfiability, acyclic TBox">
 <meta name="keywords" content="Semantic Web, Ontology Web Language, Resource Description Framework, OWL, DAML, RDF, RDFS">
 
-<meta name="keywords" content="Дескрипционная логика, Модальная логика, Вычислительная сложность, Онтология, Семантическая паутина">
+<meta name="keywords" content="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ">
 <meta name="keywords" content="Yash Pote, NUS">
 
 <link rel="shortcut icon" type="image/x-icon" href="dl.ico">
@@ -34,16 +34,16 @@
 
 <table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
 <tr>
-<td width="150"><a href="http://www.dl.kr.org/" title="DL Homepage"><img
- align="left" width="130" height="120" border="0" alt="DL Logo" src="dl_logo.gif"></a></td>
+<td width="150"><a href="http://127.0.0.1/" title="Homepage"><img
+ align="left" width="130" height="120" border="0" alt="Logo" src="dl_logo.gif"></a></td>
 <td align="center">
-<h2 style="margin-top:5pt;margin-bottom:3pt">Complexity of reasoning in Description Logics</h2>
+<h1 style="margin-top:5pt;margin-bottom:3pt">Models of Distribution Testing</h1>
 <div style="font-size:10pt;font-weight:bold;text-align:center;margin-bottom:7pt">
 Note: the information here is (always) incomplete and
-<a style="color:blue" title="Updates of the Navigator" href="news.html">updated</a> often
+<a style="color:teal" title="Updates of the Navigator" href="news.html">updated</a> often
 </div>
 
-<table border="0" cellspacing="0" cellpadding=5><tr><td style="background:#f7f7f7; text-align:center; border-radius:7px;">
+<!-- <table border="0" cellspacing="0" cellpadding=5><tr><td style="background:#f7f7f7; text-align:center; border-radius:7px;">
 <span class="nobr">Base description logic: <em>A</em>ttributive <em>L</em>anguage with <em>C<sub>&nbsp;</sub></em>omplements</span>
 <br><span style="color:blue"><span class="nobr">
 <em>ALC</em> ::=
@@ -54,145 +54,61 @@ Note: the information here is (always) incomplete and
 &nbsp;|&nbsp; <i>C</i> &cap; <i>D</i>
 &nbsp;|&nbsp; <i>C</i> &cup; <i>D</i>
 &nbsp;|&nbsp; &exist;<i>R</i>.<i>C</i>
-&nbsp;|&nbsp; &forall;<i>R</i>.<i>C</i></span></span><!--<br>
-It corresponds to the multi-modal logic <b>K<sub>m</sub></b>-->
-</td></tr></table>
-<td width="150"><a href="http://www.dl.kr.org/" title="DL Homepage"><img
- align="left" width=130 height=120 border="0" alt="DL Logo" src="dl_logo.gif"></a></td>
+&nbsp;|&nbsp; &forall;<i>R</i>.<i>C</i></span></span>
+<br>It corresponds to the multi-modal logic <b>K<sub>m</sub></b>
+</td></tr></table> -->
+<td width="150"><a href="http://127.0.0.1/" title="Homepage"><img
+ align="left" width=130 height=120 border="0" alt="Logo" src="dl_logo.gif"></a></td>
 </table>
 
 <form name="LogicForm" style="margin-top:3pt;margin-bottom:3pt">
+
+
+
 <table width="99%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-radius:7px;border:1px solid black;">
 <tbody valign="top">
-<tr><td colspan="2" style="border-radius:6px 0px 0px 0px;">
-<h3>Concept constructors:</h3>
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tbody>
-
-<tr class="hl"><td><label for="F"><span><div><span class="nobr"><input onClick="ShowAll()" type="checkbox" name="F" id="F"> <em class="med">F</em> &ndash; functionality<sup><a target="_self" href="#note2">2</a></sup>: <span class="bl">(&le;1 <i>R</i>)</span></span></div></span></label></td></tr>
-<tr class="hl"><td><label for="N"><span><div><span class="nobr"><input onClick="ShowAll()" type="checkbox" name="N" id="N"> <em class="med">N</em> &ndash; (unqualified) number restrictions: <span class="bl">(&ge;<i>n</i> <i>R</i>)</span>, <span class="bl">(&le;<i>n</i> <i>R</i>)</span></span></div></span></label></td></tr>
-<tr class="hl"><td><label for="Q"><span><div><span class="nobr"><input onClick="ShowAll()" type="checkbox" name="Q" id="Q"> <em class="med">Q</em> &ndash; qualified number restrictions: <span class="bl">(&ge;<i>n</i> <i>R</i>.<i>C</i>)</span>, <span class="bl">(&le;<i>n</i> <i>R</i>.<i>C</i>)</span></span></div></span></label></td></tr>
-<tr class="hl"><td><label for="O"><span><div><span class="nobr"><input onClick="ShowAll()" type="checkbox" name="O" id="O"> <em class="med">O</em> &ndash; nominals: <span class="bl">{<i>a</i>}</span> or <span class="bl">{<i>a</i><sub><i>1</i></sub>, ..., <i>a</i><sub><i>n</i></sub>}</span> ("one-of")</span></div></span></label></td></tr>
-
-<tr><td><div align="left" style="margin-top:5px;margin-bottom:-4px;"><hr align="left" width=480 class="dashes"></div></td></tr>
-
-<tr class="hl"><td><label for="MuOperator"><span><div><span class="nobr"><input onClick="ShowAll()" type="checkbox" name="MuOperator" id="MuOperator"> <em>&mu;</em> &ndash; least fixpoint operator: <span class="bl"><em>&mu;</em><sub>&nbsp;</sub><i>X.C</i></span></span></div></span></label></td></tr>
-<!--
-<tr><td><span class="nobr"><span title="Not realised yet"><input onClick="ShowAll()" type="checkbox" name="RoleVMaps" disabled> <span class="bl"><i>R</i>&sube;<i>S</i></span> &ndash; role-value maps</span></span></td></tr>
-<tr><td><span class="nobr"><span title="Not realised yet"><input onClick="ShowAll()" type="checkbox" name="Agreement" disabled> <span class="bl"><i>f</i> = <i>g</i></span> &ndash; agreement of functional role chains ("same-as")</span></span></td></tr>
--->
-
-<tr><td><div align="left" style="margin-top:0px;margin-bottom:-4px;"><hr align="left" style="margin-top:5px;margin-bottom:5px;padding:0pt"></div></td></tr>
-
-	<tr class="hl"><td><span class="nobr">
-		<select name="ROpInN" onChange="ShowAll();" style="margin-top:3px;margin-left:3px;" disabled>
-			<option style="color:red" value="Forbid" selected>Forbid</option>
-			<option style="color:green" value="Allow">Allow</option>
-		</select> complex roles<sup><a target="_self" href="#note5">5</a></sup> in number restrictions<sup><a target="_self" href="#note6">6</a></sup>
-	</span></td></tr>
-
-</tbody>
-</table>
-
-<td style="border-radius:0px 6px 0px 0px;">
-<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0pt;padding:0pt;">
-<tr><td align="left"><h3>Role constructors:</h3></td>
-<td align=right>
-<input name="TransButton" type=button value="trans" onClick="CheckTrans();ShowAll();" title="&cup;,o,*"><!--
---><input name="RegButton" type=button value="reg" onClick="CheckReg();ShowAll();" title="&cup;,o,*,id">
-</td></tr></table>
-
-<table width="100%" border="0" cellspacing="1" cellpadding="0">
-<tbody>
-
-<!-- Inverse -->
-
-	<tr class="hl"><td width="10"><label for="Inverses"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Inverses" id="Inverses"> <em class="med">I</em>
-	</span></div></span></label></td>
-
-	<td><label for="Inverses"><span><div><span class="nobr">
-		&ndash; role inverse: <span class="bl"><i>R</i><sup>&mdash;</sup></span>
-	</span></div></span></label></td></tr>
-
-<!-- Dashed line -->
-
-	<tr><td colspan=2>
-		<div align="left" style="margin-top:2px;margin-bottom:-7px;"><hr align="left" width=290 class="dashes"></div>
-	</td></tr>
-
-<!-- Intersection -->
-
-	<tr class="hl"><td><label for="Intersect"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Intersect" id="Intersect"> &cap;
-	</span></div></span></label></td>
-      
-	<td><label for="Intersect"><span><div><span class="nobr">
-		&ndash; role intersection<sup><a target="_self" href="#note3">3</a></sup>: <span class="bl"><i>R</i><sub>&nbsp;</sub>&cap;<sub>&nbsp;</sub><i>S</i></span>
-	</span></div></span></label></td></tr>
-
-<!-- Union -->
-      
-	<tr class="hl"><td><label for="Union"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Union" id="Union"> &cup;
-	</span></div></span></label></td>
-
-	<td><label for="Union"><span><div><span class="nobr">
-		&ndash; role union: <span class="bl"><i>R</i><sub>&nbsp;</sub>&cup;<sub>&nbsp;</sub><i>S</i></span>
-	</span></div></span></label></td></tr>
-
-<!-- Complement -->
-
-	<tr class="hl"><td><label for="Complement"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Complement" id="Complement"> &not;
-	</span></div></span></label></td>
-
-	<td><label for="Complement"><span class="nobr">
-		&ndash; role complement: <span class="bl">&not;<i>R</i></span>&nbsp;</span></label>&nbsp;<!--
-			--><select name="NegType" onChange="ShowAll();" style="margin: -1pt;padding:0px;" disabled>
-			<option value="Full" selected>full</option>
-			<option value="Atomic">atomic</option>
-		</select>
-	</td></tr>
-
-<!-- Chain -->
-
-	<tr class="hl"><td><label for="Chain"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Chain" id="Chain"> o
-	</span></div></span></label></td>
-
-	<td><label for="Chain"><span><div><span class="nobr">
-		&ndash; role chain (composition): <span class="bl"><i>R</i><sub>&nbsp;</sub>o<sub>&nbsp;</sub><i>S</i></span>
-	</span></div></span></label></td></tr>
-
-<!-- Kleene -->
-
-	<tr class="hl"><td><label for="Kleene"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Kleene" id="Kleene"> *
-	</span></div></span></label></td>
-
-	<td><label for="Kleene"><span><div><span class="nobr">
-		&ndash; reflexive-transitive closure<sup><a target="_self" href="#note4">4</a></sup>: <span class="bl"><i>R</i>*</span>
-	</span></div></span></label></td></tr>
-
-<!-- Identity -->
-
-	<tr class="hl"><td><label for="Identity"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Identity" id="Identity"> <i>id</i>&nbsp;
-	</span></div></span></label></td>
-
-	<td><label for="Identity"><span><div><span class="nobr">
-		&ndash; concept identity: <span class="bl"><i>id</i>(<i>C</i>)</span>
-	</span></div></span></label></td></tr>
-
-</tbody>
-</table>
 
 
-</td></tr>
+	<!-- <tr bgcolor="#eeeeee" valign="middle">
+	<td colspan="2" align=right style="border-left:0pt;border-right:0pt">
+	Please select distance metrics: 
+	<td align="left" width="50%" style="border-left:0pt; border-radius:0px 0px 6px 0px;">
+		
+	<span id="LogicChosen" style="color:blue"></span>
+	<span id="CRNRStatus"  style="color:green"></span> -->
+		
+		
+		
+	<tr><td colspan="4">
 
-<tr><td colspan="2">
+		<h3>Select Distance Metrics <span id="TBoxInternalize">:</span></h3>
+		
+		<table width="100%" border="0" cellspacing="1" cellpadding="1">
+		<tbody>
+		
+		<tr class="hl">
+			<td><label for="TB1"><span><div><span class="nobr">
+				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB1" value="NoTBox" checked> d_{TV} - d_{TV}
+			</span></div></span></label></td>
+		
+			<td><label for="TB2"><span><div><span class="nobr">
+				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB2" value="AcyclicTBox"> d_{\infty} - d_{TV}
+			</span></div></span></label></td>
+		
+			<td><label for="TB3"><span><div><span class="nobr">
+				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB3" value="GeneralTBox"> 0 - d_{TV}
+			</span></div></span></label></td>
+		</tr>
+		
+		</tbody>
+		</table>
+		
+		</td>
+
+
+
+
+<!-- <tr><td colspan="2">
 
 <h3>TBox (concept axioms)<span id="TBoxInternalize">:</span></h3>
 
@@ -240,10 +156,10 @@ It corresponds to the multi-modal logic <b>K<sub>m</sub></b>-->
 </table>
 
 </td>
-<td align="right" width="5"><!--
---><input name="OWLLite" type=button value="OWL-Lite"      onClick="CheckOWLLite();ShowAll();"><br><!--
---><input name="OWLDL"   type=button value="OWL-DL&nbsp;"  onClick="CheckOWLDL();ShowAll();"><br><!--
---><input name="OWL11"   type=button value="OWL 1.1&nbsp;" onClick="CheckOWL11();ShowAll();"></td>
+<td align="right" width="5">
+	<input name="OWLLite" type=button value="OWL-Lite"      onClick="CheckOWLLite();ShowAll();"><br>
+	<input name="OWLDL"   type=button value="OWL-DL&nbsp;"  onClick="CheckOWLDL();ShowAll();"><br>
+	<input name="OWL11"   type=button value="OWL 1.1&nbsp;" onClick="CheckOWL11();ShowAll();"></td>
 <tr><td colspan=2>
 
 <table width="99%" border="0" cellspacing="0" cellpadding="0">
@@ -259,17 +175,16 @@ It corresponds to the multi-modal logic <b>K<sub>m</sub></b>-->
 	<tr class="hl"><td><label for="OtherStuff"><span><div><span class="nobr">
 		<input onClick="ShowAll()" type="checkbox" name="OtherStuff" id="OtherStuff" disabled>
 <em>s</em> &ndash; some additional features (click to see them)
-<!-- SRIQ: Disj(R,S), Refl(R), Irr(R), &exist;R.Self, &neg aRb in ABox.
-    SROIQ: additionally: Antisymm(R), Universal role.
--->
+
 	</span></div></span></label></td></tr>
 
 </tbody>
 </table>
 
-</td></tr></table>
+</td></tr></table> -->
 
-<tr bgcolor="#eeeeee" valign="middle">
+
+<!-- <tr bgcolor="#eeeeee" valign="middle">
 <td style="border-right:0pt;border-radius:0px 0px 0px 6px;"><input
  type="button" value="Reset" onClick="AllReset()" style="color:red;"></td>
 <td align=right style="border-left:0pt;border-right:0pt">
@@ -277,16 +192,27 @@ You have selected a Description Logic: <span id="CRNRField"></span>
 <td align="left" width="50%" style="border-left:0pt; border-radius:0px 0px 6px 0px;">
 
 <span id="LogicChosen" style="color:blue"></span>
-<span id="CRNRStatus"  style="color:green"></span>
+<span id="CRNRStatus"  style="color:green"></span> -->
 
 </table>
 </form>
 
+
+
+
+
+
+
+
+
+
+
 <!-- ======================== ANSWERS ============================================================== -->
 
 <table width="99%" border="1" cellspacing="0" cellpadding=3 align="center" style="border-radius:7px 7px 7px 7px;">
-<thead><th colspan="3" align="center" bgcolor="#eebbbb" style="border-radius:6px 6px 0px 0px;">
-Complexity<sup><a target="_self" href="#note7">7</a></sup> of reasoning problems<sup><a target="_self" href="#note8">8</a></sup>
+<thead><th colspan="9" align="center" bgcolor="#eebbbb" style="border-radius:6px 6px 0px 0px;">
+Query Complexity of Model vs Model setup
+
 <tbody>
 <!--
 <tr align="center" style="font-weight:bold" bgcolor="#eeeeee">
@@ -296,13 +222,56 @@ Complexity<sup><a target="_self" href="#note7">7</a></sup> of reasoning problems
 -->
 
 <tr>
-<td width="10%" align="center">Concept<br>satisfiability
-<td width="18%" align="center"><span class="nobr"><b><span id="ConcSatC">&nbsp;</span></b></span>
-<td width="70%"><span id="ConcSatR">&nbsp;</span>
+<td width="10%" align="center">
+<td width="10%" align="center">SAMP
+<td width="10%" align="center">EVAL
+<td width="10%" align="center">PR
+<td width="10%" align="center">DUAL
+<td width="10%" align="center">PAIRCOND
+<td width="10%" align="center">SUBCOND
+<td width="10%" align="center">COND
+<td width="10%" align="center">FULL
+	
+<!-- <td width="18%" align="center"><span class="nobr"><b><span id="ConcSatC">&nbsp;</span></b></span>
+<td width="70%"><span id="ConcSatR">&nbsp;</span> -->
 
-<tr><td align="center">ABox<br>consistency
+<tr><td align="center">SAMP
+<td align="center"><span class="nobr"><b><span id="ConcSatC">&nbsp;</span></b></span>
+<td><span id="ConcSatR">&nbsp;</span>
+
+<tr><td align="center">EVAL
 <td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
 <td><span id="ABoxConsR">&nbsp;</span>
+
+<tr><td align="center">PR
+<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
+<td><span id="ABoxConsR">&nbsp;</span>
+
+	
+<tr><td align="center">DUAL
+<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
+<td><span id="ABoxConsR">&nbsp;</span>
+
+
+<tr><td align="center">PAIRCOND
+<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
+<td><span id="ABoxConsR">&nbsp;</span>
+
+
+<tr><td align="center">SUBCOND
+<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
+<td><span id="ABoxConsR">&nbsp;</span>
+
+
+<tr><td align="center">COND
+<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
+<td><span id="ABoxConsR">&nbsp;</span>
+
+
+<tr><td align="center">FULL
+<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
+<td><span id="ABoxConsR">&nbsp;</span>
+
 <!--
 <tr><td>Concept&nbsp;satisfiability in <i>L</i>(<i>D</i>)
 <td align="center"><span class="nobr"><b><span id="ConcrC">&nbsp;</span></b></span>
@@ -312,21 +281,21 @@ Complexity<sup><a target="_self" href="#note7">7</a></sup> of reasoning problems
 <td align="center"><span class="nobr"><b><span id="QueryC">&nbsp;</span></b></span>
 <td><span id="QueryR">&nbsp;</span>
 -->
-<tr><td colspan="3" align="center" bgcolor="#eebbbb" style="font-weight:bold;">
-Important properties of the Description Logic
+<!-- <tr><td colspan="3" align="center" bgcolor="#eebbbb" style="font-weight:bold;">
+Important properties of the Description Logic -->
 <!--
 <tr align="center" style="font-weight:bold" bgcolor="#eeeeee">
 <td width=20%>Logic property
 <td width=15%>Possess
 <td width=65%>Comments&nbsp;and&nbsp;references
 -->
-<tr><td align="center">Finite&nbsp;model<br>property
+<!-- <tr><td align="center">Finite&nbsp;model<br>property
 <td align="center"><span class="nobr"><b><span id="FiniteC">&nbsp;</span></b></span>
 <td><span id="FiniteR">&nbsp;</span>
 
 <tr><td align="center" style="border-radius:0px 0px 0px 6px;">Tree&nbsp;model<br>property
 <td align="center"><span class="nobr"><b><span id="TreeC">&nbsp;</span></b></span>
-<td style="border-radius:0px 0px 6px 0px;"><span id="TreeR">&nbsp;</span>
+<td style="border-radius:0px 0px 6px 0px;"><span id="TreeR">&nbsp;</span> -->
 
 </tbody>
 </table>
@@ -379,7 +348,7 @@ Guy Kawasaki<br> "The Macintosh Way"
 
 <!-- ======================================= NOTES ============================== -->
 
-<hr width="99%">
+<!-- <hr width="99%">
 
 <table border="0" cellspacing="0" cellpadding="0" width="99%">
 <tr><td>
@@ -503,10 +472,10 @@ and how TBox can be eliminated in extensions of <em>ALCIO</em>,
 <em>SH</em>, and <em>ALC</em>(&cup;,*).
 Proofs are missing (can be found in literature below).
 </ol>
-</td></tr></table>
+</td></tr></table> -->
 
 <!-- ======================================= REFERENCES ============================== -->
-
+<div style="display:none">
 
 <hr>
 
@@ -4576,7 +4545,7 @@ In
 Rohit Parikh, editor,
 </span>
 <span class="conference">Proc. of the 5th <a href="http://dblp.uni-trier.de/db/conf/lop/">Workshop on Logics of Programs</a>,
-	<span class="long">Brooklyn, June 17–19, 1985,</span>
+	<span class="long">Brooklyn, June 17пїЅ19, 1985,</span>
 </span>
 <a href="http://www.springer.com/series/558" title="Lecture Notes in Computer Science">LNCS</a>,
 <a href="http://www.springerlink.com/openurl.asp?genre=issue&amp;issn=0302-9743&amp;volume=193">vol.&nbsp;193</a>,
@@ -4845,3 +4814,4 @@ color="#999999">Best Buy Coupon</font></a></small></div>
 </table>
 
 </body></html>
+</div>
