@@ -24,12 +24,24 @@
 
 <script type="text/javascript" src="js/read_logic.js"></script>
 <script type="text/javascript" src="js/displaying.js"></script>
-<script type="text/javascript" src="js/conceptsat.js"></script>
-<script type="text/javascript" src="js/aboxconsis.js"></script>
-<script type="text/javascript" src="js/finmodprop.js"></script>
-<script type="text/javascript" src="js/tremodprop.js"></script>
+<script type="text/javascript" src="js/queryComplexity.js"></script>
 
-</head>
+ <!-- Set up mathjax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- Set up KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+
+	</head>
 <body>
 
 <table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
@@ -88,15 +100,15 @@ Note: the information here is (always) incomplete and
 		
 		<tr class="hl">
 			<td><label for="TB1"><span><div><span class="nobr">
-				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB1" value="NoTBox" checked> d_{TV} - d_{TV}
+				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB1" value="TvTv" checked> \(d_{TV}\) vs. \(d_{TV}\)
 			</span></div></span></label></td>
 		
 			<td><label for="TB2"><span><div><span class="nobr">
-				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB2" value="AcyclicTBox"> d_{\infty} - d_{TV}
+				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB2" value="TvInfty"> \(d_{\infty}\) vs. \(d_{TV}\)
 			</span></div></span></label></td>
 		
 			<td><label for="TB3"><span><div><span class="nobr">
-				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB3" value="GeneralTBox"> 0 - d_{TV}
+				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB3" value="TvZero"> \(0\) vs. \(d_{TV}\)
 			</span></div></span></label></td>
 		</tr>
 		
@@ -236,41 +248,64 @@ Query Complexity of Model vs Model setup
 <td width="70%"><span id="ConcSatR">&nbsp;</span> -->
 
 <tr><td align="center">SAMP
-<td align="center"><span class="nobr"><b><span id="ConcSatC">&nbsp;</span></b></span>
-<td><span id="ConcSatR">&nbsp;</span>
+<td align="center"><span class="nobr"><b><span id="sampSamp">&nbsp;</span></b></span>
 
 <tr><td align="center">EVAL
-<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
-<td><span id="ABoxConsR">&nbsp;</span>
+<td align="center"><span class="nobr"><b><span id="evalSamp">&nbsp;</span></b></span>
+<td><span id="evalEval">&nbsp;</span>
 
 <tr><td align="center">PR
-<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
-<td><span id="ABoxConsR">&nbsp;</span>
+<td align="center"><span class="nobr"><b><span id="prSamp">&nbsp;</span></b></span>
+<td><span id="prEVAL">&nbsp;</span>
+<td><span id="prPr">&nbsp;</span>
 
 	
 <tr><td align="center">DUAL
-<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
-<td><span id="ABoxConsR">&nbsp;</span>
+<td align="center"><span class="nobr"><b><span id="dualSamp">&nbsp;</span></b></span>
+<td><span id="dualEval">&nbsp;</span>
+<td><span id="dualPr">&nbsp;</span>
+<td><span id="dualDual">&nbsp;</span>
 
 
 <tr><td align="center">PAIRCOND
-<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
-<td><span id="ABoxConsR">&nbsp;</span>
+<td align="center"><span class="nobr"><b><span id="pairSamp">&nbsp;</span></b></span>
+<td><span id="pairEval">&nbsp;</span>
+<td><span id="pairPr">&nbsp;</span>
+<td><span id="pairDual">&nbsp;</span>
+<td><span id="pairPair">&nbsp;</span>
+
 
 
 <tr><td align="center">SUBCOND
-<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
-<td><span id="ABoxConsR">&nbsp;</span>
-
+<td align="center"><span class="nobr"><b><span id="subSamp">&nbsp;</span></b></span>
+<td><span id="subEval">&nbsp;</span>
+<td><span id="subrPr">&nbsp;</span>
+<td><span id="subDual">&nbsp;</span>
+<td><span id="subPair">&nbsp;</span>
+<td><span id="subSub">&nbsp;</span>
+	
+	
 
 <tr><td align="center">COND
-<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
-<td><span id="ABoxConsR">&nbsp;</span>
+<td align="center"><span class="nobr"><b><span id="condSamp">&nbsp;</span></b></span>
+<td><span id="condEval">&nbsp;</span>
+<td><span id="condPr">&nbsp;</span>
+<td><span id="condDual">&nbsp;</span>
+<td><span id="condPair">&nbsp;</span>
+<td><span id="condSub">&nbsp;</span>
+<td><span id="condCond">&nbsp;</span>
 
 
 <tr><td align="center">FULL
-<td align="center"><span class="nobr"><b><span id="ABoxConsC">&nbsp;</span></b></span>
-<td><span id="ABoxConsR">&nbsp;</span>
+<td align="center"><span class="nobr"><b><span id="fullSamp">&nbsp;</span></b></span>
+<td><span id="fullEval">&nbsp;</span>
+<td><span id="fullPr">&nbsp;</span>
+<td><span id="fullDual">&nbsp;</span>
+<td><span id="fullPair">&nbsp;</span>
+<td><span id="fullSub">&nbsp;</span>
+<td><span id="fullCond">&nbsp;</span>
+<td><span id="fullFull">&nbsp;</span>
+
 
 <!--
 <tr><td>Concept&nbsp;satisfiability in <i>L</i>(<i>D</i>)

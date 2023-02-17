@@ -1,63 +1,91 @@
 var  // Output strings
 
-SATComplexity   ='';
-SATComment      ='';
-ABoxComplexity  ='';
-ABoxComment     ='';
+SAMPSAMP = '';
+EVALSAMP = '';
+EVALEVAL = '';
+PRSAMP = '';
+PREVAL = '';
+PRPR = '';
+DUALSAMP = '';
+DUALEVAL = '';
+DUALPR = '';
+DUALDUAL = '';
+PAIRSAMP = '';
+PAIREVAL = '';
+PAIRPR = '';
+PAIRDUAL = '';
+PAIRPAIR = '';
+SUBSAMP = '';
+SUBEVAL = '';
+SUBPR = '';
+SUBDUAL = '';
+SUBPAIR = '';
+SUBSUB = '';
+CONDSAMP = '';
+CONDEVAL = '';
+CONDPR = '';
+CONDDUAL = '';
+CONDPAIR = '';
+CONDSUB = '';
+CONDCOND = '';
+FULLSAMP = '';
+FULLEVAL = '';
+FULLPR = '';
+FULLDUAL = '';
+FULLPAIR = '';
+FULLSUB = '';
+FULLCOND = '';
+FULLFULL = '';
 
-//QueryComplexity ='';
-//QueryComment    ='';
-//LDComplexity    ='';
-//LDComment       ='';
-
-TreeAnswer      ='';
-TreeComment     ='';
-FiniteAnswer    ='';
-FiniteComment   ='';
-
-
-var
-PS='PSpace-complete';
-EX='ExpTime-complete';
-NE='NExpTime-complete';
-UN='Undecidable';
-DE='Decidable';
-iPS='In&nbsp;PSpace';
-iEX='In&nbsp;ExpTime';
-iNE='In&nbsp;NExpTime';
-hPS='PSpace-hard';
-hEX='ExpTime-hard';
-hNE='NExpTime-hard';
-EEX='2-ExpTime-complete';
 
 // ===============================================================================================
 
 function ShowID(ID,iHTML)
 {
- document.getElementById(ID).innerHTML=iHTML;
+ document.getElementById(ID).innerHTML=katex.renderToString(iHTML);
 }
 
 
 function DisplayResults()
 {
 
- ShowID('ConcSatC',SATComplexity);
- ShowID('ConcSatR',SATComment);
+ ShowID('sampSamp',SAMPSAMP);
+ ShowID('evalSamp',EVALSAMP);
+ ShowID('evalEval',EVALEVAL);
+ ShowID('prSamp',PRSAMP);
+ ShowID('prEVAL',PREVAL);
+ ShowID('prPr',PRPR);
+ ShowID('dualSamp',DUALSAMP);
+ ShowID('dualEval',DUALEVAL);
+ ShowID('dualPr',DUALPR);
+ ShowID('dualDual',DUALDUAL);
+ ShowID('pairSamp',PAIRSAMP);
+ ShowID('pairEval',PAIREVAL);
+ ShowID('pairPr',PAIRPR);
+ ShowID('pairDual',PAIRDUAL);
+ ShowID('pairPair',PAIRPAIR);
+ ShowID('subSamp',SUBSAMP);
+ ShowID('subEval',SUBEVAL);
+ ShowID('subrPr',SUBPR);
+ ShowID('subDual',SUBDUAL);
+ ShowID('subPair',SUBPAIR);
+ ShowID('subSub',SUBSUB);
+ ShowID('condSamp',CONDSAMP);
+ ShowID('condEval',CONDEVAL);
+ ShowID('condPr',CONDPR);
+ ShowID('condDual',CONDDUAL);
+ ShowID('condPair',CONDPAIR);
+ ShowID('condSub',CONDSUB);
+ ShowID('condCond',CONDCOND);
+ ShowID('fullSamp',FULLSAMP);
+ ShowID('fullEval',FULLEVAL);
+ ShowID('fullPr',FULLPR);
+ ShowID('fullDual',FULLDUAL);
+ ShowID('fullPair',FULLPAIR);
+ ShowID('fullSub',FULLSUB);
+ ShowID('fullCond',FULLCOND);
+ ShowID('fullFull',FULLFULL);
 
- ShowID('ABoxConsC',ABoxComplexity);
- ShowID('ABoxConsR',ABoxComment);
-/*
- ShowID('ConcrC',LDComplexity);
- ShowID('ConcrR',LDComment);
-
- ShowID('QueryC',QueryComplexity);
- ShowID('QueryR',QueryComment);
-*/
- ShowID('FiniteC',FiniteAnswer);
- ShowID('FiniteR',FiniteComment);
-
- ShowID('TreeC',TreeAnswer);
- ShowID('TreeR',TreeComment);
 
 }
 
@@ -66,298 +94,22 @@ function DisplayResults()
 
 function ShowComplexity()
 {
- SATComplexity   = Dunno;
- SATComment      = SPACE;
- ABoxComplexity  = Dunno;
- ABoxComment     = SPACE;
-/*
- QueryComplexity = Dunno;
- QueryComment    = SPACE;
- LDComplexity    = Dunno;
- LDComment       = SPACE;
-*/
+//  SATComplexity   = Dunno;
+//  SATComment      = SPACE;
+//  ABoxComplexity  = Dunno;
+//  ABoxComment     = SPACE;
 
- TreeAnswer      = Dunno;
- TreeComment     = SPACE;
- FiniteAnswer    = Dunno;
- FiniteComment   = SPACE;
-
-
- ConceptSAT();
- ABoxConsistency();
-// ConjunctiveQuery();
-// ConceptSAT_LD();
- TreeModelProp();
- FiniteModelProp();
-
+ QueryC();
  DisplayResults();
 
 }
 
 
-// ########################################################
-
-function LogicName()
-{
-var
- LogPrefix=
- (AxCRI? ((AxMisc? 's':'')+'R'):
- (AxTrans? 'S':'ALC') + (AxHierar? 'H':''));
-
- LogSuffix= ( Nominals? 'O':'' )+
-            ( RInver?   'I':'' )+
-            ( QNRestr?  'Q':(NRestr?'N':(Func?'F':'')));
-
- LogRoleOpers='';
-
- if(ROpers!=0 && MM==0)
- { // RInter RUnion RCompl RCompo RStar idC
-   //   1      2      4      8     16    32
-
-  if(ROpers==26) LogRoleOpers='<sub><i>trans</i></sub>';
-  else
-  {
-   if(ROpers==58) LogRoleOpers='<sub><i>reg</i></sub>';
-   else
-   {
-     var OperArray=new Array();
-
-     if (RInter) OperArray[OperArray.length]='&cap;';
-     if (RUnion) OperArray[OperArray.length]='&cup;';
-     if (RCompo) OperArray[OperArray.length]='o';
-     if (RCompl) OperArray[OperArray.length]='&not;'+
-     ( document.LogicForm.NegType.disabled? '': (RComplFull? '(full)':'(atomic)') );
-     if (RStar)  OperArray[OperArray.length]='*';
-     if (idC)    OperArray[OperArray.length]='<i>id</i>';
-
-    LogRoleOpers='(';
-    for(var i=0;i<OperArray.length;i++)
-    {
-     LogRoleOpers+=OperArray[i]+((i+1<OperArray.length)? ",":"");
-    }
-    LogRoleOpers+=")";
-   }
-  }
- }
-
- return ( '<em>'+
-  (MuOper? '&mu;':'')+
-  LogPrefix + LogSuffix + '</em><sub>&nbsp;</sub>' +
-  LogRoleOpers
-//  +(RVMaps? ' + Role-value-maps':'')
-//  +(FAgree? ' + \'\'same-as\'\'':'')
-//  +( document.LogicForm.NegType.disabled? '':
-//     ( '&nbsp;[role&nbsp;complement:&nbsp;'+ (RComplFull? 'full':'atomic') +']') )
-  );
-
-//  +( (document.LogicForm.ROpInN.disabled)? '':
-//   ( '<br>[complex roles in num. restrictions:&nbsp;'+ (BRinN? 'allowed':'forbidden') +']') )
-
-// if(!document.LogicForm.ROpInN.disabled)
-// {
-//  CRNRField
-// }
-
-}
-
-function ShowLogic()
-{
-  ShowID('LogicChosen',LogicName());
-  ShowID('CRNRField', ( document.LogicForm.ROpInN.disabled? '':'<sub><em>&nbsp;</em></sub><br>Complex roles in number restrictions are:') );
-  ShowID('CRNRStatus',( document.LogicForm.ROpInN.disabled? '': ('<br>'+(BRinN? '<span style="color:green">allowed</span>':'<span style="color:red">forbidden</span>') ) ) );
-}
-
-var MuOperHasBeenBefore=false;
-    CRIHasBeenBefore=false;
-
-function CheckDependencies()
-{
- with(document.LogicForm)
- {
-   F.disabled = ( NRestr || QNRestr ); // More expressive constructs
-   N.disabled = QNRestr;               // absorb weaker ones.
-
-  if(RCompl && RComplFull)
-  {
-    if(RUnion) { Intersect.checked=true; RInter=true; } // Not only show adjusted checkboxes,
-    if(RInter) {     Union.checked=true; RUnion=true; } // but also amend boolean variables!
-  }
-
-  if(MuOper)
-  { // mu-ALC contains ALC_reg (but since we have no role operators EXPLICITLY,
-    // there is no way to allow or forbid them in number restrictions).
-
-    // Check and disable boxes: RUnion, RCompo, RStar, id(C). Adjust boolean variables.
-
-      Union.checked = true;    Union.disabled = true; RUnion = true;
-      Chain.checked = true;    Chain.disabled = true; RCompo = true;
-     Kleene.checked = true;   Kleene.disabled = true;  RStar = true;
-   Identity.checked = true; Identity.disabled = true;    idC = true;
-
-    // For safety and simplicity, uncheck and disable the rest of role operators (except inverse).
-    // Anyway, noone considered such logics.
-
-  Intersect.checked = false;  Intersect.disabled = true; RInter = false;
- Complement.checked = false; Complement.disabled = true; RCompl = false;
-
-    // Although this does not matter, but for transparent interface: disable "TRANS" and "REG" buttons.
-
-     TransButton.disabled = true; 
-       RegButton.disabled = true; 
-
-    // Put the selector "RinN" into "Forbid" state (and disable it).
-
-     ROpInN[0].selected = true;
-
-     MuOperHasBeenBefore=true;
-
-  }else{
-   if(MuOperHasBeenBefore)
-   {
-    // Undo all the above (leaving unchanged the values of Intersect, Complement, RinN,
-    // //////// and still disable RinN, even if it is enabled mistakenly by its own logic - before MuOp)
-    
-       Union.checked = false;    Union.disabled = false; RUnion = false;
-       Chain.checked = false;    Chain.disabled = false; RCompo = false;
-      Kleene.checked = false;   Kleene.disabled = false;  RStar = false;
-    Identity.checked = false; Identity.disabled = false;    idC = false;
-    
-        Intersect.disabled = false;
-       Complement.disabled = false;
-    
-      TransButton.disabled = false; 
-        RegButton.disabled = false; 
-
-       MuOperHasBeenBefore = false;
-   }
-  } // end of Mu
-
-  if(AxCRI)
-  {
-     OtherStuff.disabled = false;
-
-     // Complex role inclusions include "S" and "H"
-     Transitivity.checked = true; AxTrans  = true; Transitivity.disabled = true;
-        Hierarchy.checked = true; AxHierar = true;    Hierarchy.disabled = true;
-
-     CRIHasBeenBefore=true;
-  }
-  else
-  {
-    if(CRIHasBeenBefore)
-    {
-      Transitivity.checked = false; AxTrans  = false;  Transitivity.disabled = false;
-         Hierarchy.checked = false; AxHierar = false;  Hierarchy.disabled = false;
-
-       OtherStuff.checked  = false;  AxMisc = false;
-       OtherStuff.disabled = true;
-
-      CRIHasBeenBefore=false;
-    }
-  }
-
-  // The distinction of "atomic" and "full" negation makes sence when we have
-  // role negation, any other role operation, but (???) it is not the case that we have
-  // only negation, union and intersection (in this case "atomic"="full").
-
-  NegType.disabled = !( RCompl && (RInter || RUnion ||  RCompo ||  RStar ||  idC));
-                            // && !(RInter && RUnion && !RCompo && !RStar && !idC));
-
-  ROpInN.disabled = MuOper || !( (Func || NRestr || QNRestr) &&
-                                 (RInter || RUnion || RCompl || RCompo || RStar || idC) );
-
-  // It is essential that this goes after "if(RCompl && RComplFull)"
-  if((RInver && Nominals) || (AxTrans && AxHierar) || (RUnion && RStar) || MuOper)
-  {
-   TBoxOpt[0].disabled=true;
-   TBoxOpt[1].disabled=true;
-   TBoxOpt[2].disabled=true;
-   ShowID('TBoxInternalize','<span style=\"font-weight:normal;font-size:12pt\"> is <i>internalizable</i> in extensions of '+
-   ( (RInver && Nominals)? '<em>ALCIO</em>, see ['+Tobies2000+',&nbsp;Lemma&nbsp;4.12], ['+LutzImproved2004+',&nbsp;p.3]':
-   ( (AxTrans && AxHierar)? '<em>SH</em>, see ['+HorrocksSattlerSHI1999+',&nbsp;'+HorrocksSattlerPract2000+'].':
-   ( (MuOper)? '<em>&mu;ALC</em>, see ['+DeGiacomoLenzerini1997+',&nbsp;Theorem&nbsp;5].':
-   ( (RUnion && RStar)? '<em>ALC</em>(&cup;,*), see ['+DLBook+',&nbsp;p.186].':'this mesg will never show!') ))) );
-   TBoxOption=InterTB;
-  }
-  else
-  {
-   for (j=0;j<3;j++) TBoxOpt[j].disabled=false;
-   ShowID('TBoxInternalize',':');
-  }
-
- } // end of "with"
-}
-
-function CheckTrans()
-{with(document.LogicForm)
- {
-  Intersect.checked=false;
-  Complement.checked=false;
-  Union.checked=true;
-  Chain.checked=true;
-  Kleene.checked=true;
-  Identity.checked=false;
- }
-}
-
-function CheckReg()
-{ CheckTrans();
-  document.LogicForm.Identity.checked=true;
-}
-
-function CheckOWLLite()
-{with(document.LogicForm)
- { AllReset();
-  Transitivity.checked = true;
-     Hierarchy.checked = true;
-      Inverses.checked = true;
-             F.checked = true;
- }
-}
-
-function CheckOWLDL()
-{with(document.LogicForm)
- {  AllReset();
-  Transitivity.checked = true;
-     Hierarchy.checked = true;
-      Inverses.checked = true;
-             O.checked = true;
-             N.checked = true;
- }
-}
-
-function CheckOWL11()
-{with(document.LogicForm)
- { AllReset();
-  Transitivity.checked = true;
-     Hierarchy.checked = true;
- ComplRoleIncl.checked = true;
-    OtherStuff.checked = true;
-      Inverses.checked = true;
-             O.checked = true;
-             Q.checked = true;
- }
-}
-
-// ########################################################
-
 function ShowAll()
 {
 ReadInput();
-CheckDependencies();
-InitVars();
-ShowLogic();
 ShowComplexity();
 }
-
-// ########################################################
-
-function AllReset()
-{
-document.LogicForm.reset();
-ShowAll();
-}
-
 
 
 function ShowBeta()
