@@ -14,16 +14,24 @@ var SPACE = '&nbsp;';
 
 // ########################################################
 
-TvTB = "TvTv";         // TBox options
-InftyTB = "TvInfty";
-ZeroTB = "TvZero";
+
+Tv_1 = "Tv_1";         // TBox options
+Tv_2 = "Tv_2";
+Infty_1 = "Infty_1";
+Infty_2 = "Infty_2";
+Zero_1 = "Zero_1";
+Zero_2 = "Zero_2";
+
 InterTB = "InternalizedTBox";
 
-TBoxOption=TvTB;
+TBoxOption=Tv_1;
 
-TBoxIsTv=false;
-TBoxIsInfty=false;
-TBoxIsZero=false;
+TBoxIsTv_1=false;
+TBoxIsTv_2=false;
+TBoxIsInfty_1=false;
+TBoxIsInfty_2=false;
+TBoxIsZero_1=false;
+TBoxIsZero_2=false;
 
 // MuOper=false;               // Miscellaneous
 // RVMaps=false;
@@ -35,13 +43,18 @@ function ReadInput() // Read the form into the boolean variables
  with(document.LogicForm)
  {
 
-  TBoxOption = checkedvalue(TBoxOpt);
+  TBoxOption_1 = checkedvalue(TBoxOpt_1);
+  TBoxOption_2 = checkedvalue(TBoxOpt_2);
+   
+  TBox_1IsTv = (TBoxOption_1==Tv_1);
+  TBox_1IsInfty = (TBoxOption_1==Infty_1);
+  TBox_1IsZero = (TBoxOption_1==Zero_1);
 
-  TBoxIsTv = (TBoxOption==TvTB);
-  TBoxIsInfty = (TBoxOption==InftyTB);
-  TBoxIsZero = (TBoxOption==ZeroTB);
+  TBox_2IsTv = (TBoxOption_2==Tv_2);
+  TBox_2IsInfty = (TBoxOption_2==Infty_2);
+  TBox_2IsZero = (TBoxOption_2==Zero_2);
 
-return TBoxIsTv
+  return [[TBox_1IsTv, TBox_1IsInfty, TBox_1IsZero],[TBox_2IsTv, TBox_2IsInfty, TBox_2IsZero]]
  }
 }
 

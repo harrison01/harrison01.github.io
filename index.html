@@ -17,7 +17,7 @@
 <meta name="keywords" content="�������������� ������, ��������� ������, �������������� ���������, ���������, ������������� �������">
 <meta name="keywords" content="Yash Pote, NUS">
 
-<link rel="shortcut icon" type="image/x-icon" href="dl.ico">
+<!--link rel="shortcut icon" type="image/x-icon" href="dl.ico"-->
 <link rel="stylesheet"    type="text/css"     href="dl.css">
 
 <base target="_blank">
@@ -75,48 +75,91 @@ Note: the information here is (always) incomplete and
 
 <form name="LogicForm" style="margin-top:3pt;margin-bottom:3pt">
 
-
-
 <table width="99%" border="1" cellspacing="0" cellpadding="3" align="center" style="border-radius:7px;border:1px solid black;">
 <tbody valign="top">
+        <tr><td colspan="3">
+
+                <h3>Closeness Distance  <span id="TBoxInternalize">:</span></h3>
+
+                <table width="50%" border="0" cellspacing="1" cellpadding="1">
+                <tbody>
+
+                <tr class="hl">
+                        <td><label for="TB1"><span><div><span class="nobr">
+                                <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB1" value="Tv_1" checked> \(d_{TV}\) 
+                        </span></div></span></label></td>
+                </tr>
+               <tr class="hl">
+                        <td><label for="TB2"><span><div><span class="nobr">
+                                <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB2" value="Infty_1"> \(d_{\infty}\)
+                        </span></div></span></label></td>
+                </tr>
+
+		<tr class="hl">
+                        <td><label for="TB3"><span><div><span class="nobr">
+                                <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB3" value="Zero_1"> \(0\)
+                        </span></div></span></label></td>
+                </tr>
+		</td>
+                </tbody>
+                </table>
 
 
-	<!-- <tr bgcolor="#eeeeee" valign="middle">
-	<td colspan="2" align=right style="border-left:0pt;border-right:0pt">
-	Please select distance metrics: 
-	<td align="left" width="50%" style="border-left:0pt; border-radius:0px 0px 6px 0px;">
-		
-	<span id="LogicChosen" style="color:blue"></span>
-	<span id="CRNRStatus"  style="color:green"></span> -->
-		
-		
-		
-	<tr><td colspan="4">
+		<td>
 
-		<h3>Select Distance Metrics <span id="TBoxInternalize">:</span></h3>
-		
-		<table width="100%" border="0" cellspacing="1" cellpadding="1">
+                <h3>Farness Distance  <span id="TBoxInternalize">:</span></h3>
+
+		<table width="40%" border="0" cellspacing="1" cellpadding="1">
 		<tbody>
 		
 		<tr class="hl">
 			<td><label for="TB1"><span><div><span class="nobr">
-				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB1" value="TvTv" checked> \(d_{TV}\) vs. \(d_{TV}\)
+				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB1" value="Tv_2" checked> \(d_{TV}\)
 			</span></div></span></label></td>
-		
+	        </tr>
+                <tr class="hl">
+	
 			<td><label for="TB2"><span><div><span class="nobr">
-				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB2" value="TvInfty"> \(d_{\infty}\) vs. \(d_{TV}\)
+				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB2" value="Infty_2"> \(d_{\infty}\)
 			</span></div></span></label></td>
 		
+                </tr>
+                <tr class="hl">
+
 			<td><label for="TB3"><span><div><span class="nobr">
-				<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB3" value="TvZero"> \(0\) vs. \(d_{TV}\)
+				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB3" value="Zero_2"> \(0\)
 			</span></div></span></label></td>
 		</tr>
-		
+		</td>
+                </tbody>
+                </table>
+
+                <td>
+
+                <h3> Bound  <span id="TBoxInternalize">:</span></h3>
+
+                <table width="100%" border="0" cellspacing="1" cellpadding="1">
+                <tbody>
+
+                <tr class="hl">
+                        <td><label for="LB"><span><div><span class="nobr">
+                                <input onClick="ShowAll()" type=radio name="LB" id="LB" value="LB" checked> Lower Bound
+                        </span></div></span></label></td>
+                </tr>
+                <tr class="hl">
+
+                        <td><label for="UB"><span><div><span class="nobr">
+                                <input onClick="ShowAll()" type=radio name="UB" id="UB" value="UB"> Upper Bound
+                        </span></div></span></label></td>
+                </tr>
+                </td>
+
+
+
 		</tbody>
 		</table>
 		
-		</td>
-
+`
 
 
 
@@ -4760,14 +4803,6 @@ February <b>2001</b>.
 
 
 <!-- ============================================================================================== -->
-
-<script type="text/javascript">AllReset();
-
-ShowID('FRefer','see ['+DLBook+',&nbsp;pp.88,488],&nbsp;['+LutzPhD2002+']');
-ShowID('FNQRefer','see ['+LTCSRep2004+',&nbsp;'+LutzImproved2004+',&nbsp;'+HorrocksSattlerSHI1999+',&nbsp;'+HorrocksSattlerPract2000+']');
-ShowID('PapaRefer',Papadimitriou);
-
-</script>
 
 <hr>
 
