@@ -94,10 +94,6 @@ function DisplayResults()
 
 function ShowComplexity()
 {
-//  SATComplexity   = Dunno;
-//  SATComment      = SPACE;
-//  ABoxComplexity  = Dunno;
-//  ABoxComment     = SPACE;
 
  QueryC();
  DisplayResults();
