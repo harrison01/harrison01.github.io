@@ -1,4 +1,4 @@
-function QueryC(inp_1, inp_2)  
+function QueryC(inp_1, inp_2, inp_3)  
 {
 
 TBox_1IsTv = inp_1[0]

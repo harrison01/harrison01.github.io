@@ -92,9 +92,9 @@ function DisplayResults()
 
 // ===============================================================================================
 
-function ShowComplexity(inp_1, inp_2)
+function ShowComplexity(inp_1, inp_2, inp_3)
 {
- QueryC(inp_1, inp_2);
+ QueryC(inp_1, inp_2, inp_3);
  DisplayResults();
 }
 
@@ -103,7 +103,7 @@ function ShowAll()
 {
  inp = ReadInput();
  console.log(inp);
- ShowComplexity(inp[0], inp[1]);
+ ShowComplexity(inp[0], inp[1], inp[2]);
 }
 
 

@@ -127,7 +127,7 @@ Note: the information here is (always) incomplete and
                 <tr class="hl">
 
 			<td><label for="TB3"><span><div><span class="nobr">
-				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB3" value="Zero_2"> \(0\)
+				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB3" value="Hellinger_2"> \(d_H\)
 			</span></div></span></label></td>
 		</tr>
 		</td>
@@ -135,7 +135,6 @@ Note: the information here is (always) incomplete and
                 </table>
 
                 <td>
-
                 <h3> Bound  <span id="TBoxInternalize">:</span></h3>
 
                 <table width="100%" border="0" cellspacing="1" cellpadding="1">
@@ -153,101 +152,16 @@ Note: the information here is (always) incomplete and
                         </span></div></span></label></td>
                 </tr>
                 </td>
-
-
-
+		</tr>
+		
+		<tr> 
+                   
+		</tr>
+	
 		</tbody>
 		</table>
 		
-`
 
-
-
-<!-- <tr><td colspan="2">
-
-<h3>TBox (concept axioms)<span id="TBoxInternalize">:</span></h3>
-
-<table width="100%" border="0" cellspacing="1" cellpadding="1">
-<tbody>
-
-	<tr class="hl"><td><label for="TB1"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB1" value="NoTBox" checked> empty TBox
-	</span></div></span></label></td></tr>
-
-	<tr class="hl"><td><label for="TB2"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB2" value="AcyclicTBox"> acyclic TBox
-	    (<span class="bl"><i>A</i>&nbsp;&equiv;&nbsp;<i>C</i></span>, <i>A</i> is a concept name; no cycles)
-	</span></div></span></label></td></tr>
-
-	<tr class="hl"><td><label for="TB3"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type=radio name="TBoxOpt" id="TB3" value="GeneralTBox"> general TBox
-	    (<span class="bl"><i>C</i>&nbsp;&sube;&nbsp;<i>D</i></span>, for arbitrary concepts <i>C</i> and <i>D</i>)
-	</span></div></span></label></td></tr>
-
-</tbody>
-</table>
-
-</td>
-<td>
-
-<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin:0pt;padding:0pt">
-<tbody valign=top>
-<tr><td align="left"><h3>RBox (role axioms):</h3>
-
-<table width="99%" border="0" cellspacing="0" cellpadding="0">
-<tbody>
-
-	<tr class="hl"><td><label for="Transitivity"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Transitivity" id="Transitivity">
-		<em class="med">S</em> &ndash; role transitivity: <span class="bl">Tr(<i>R</i>)</span>
-	</span></div></span></label></td></tr>
-
-	<tr class="hl"><td><label for="Hierarchy"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="Hierarchy" id="Hierarchy">
-		<em class="med">H</em> &ndash; role hierarchy: <span class="bl"><i>R</i>&nbsp;&sube;&nbsp;<i>S</i></span>
-	</span></div></span></label></td></tr>
-
-</tbody>
-</table>
-
-</td>
-<td align="right" width="5">
-	<input name="OWLLite" type=button value="OWL-Lite"      onClick="CheckOWLLite();ShowAll();"><br>
-	<input name="OWLDL"   type=button value="OWL-DL&nbsp;"  onClick="CheckOWLDL();ShowAll();"><br>
-	<input name="OWL11"   type=button value="OWL 1.1&nbsp;" onClick="CheckOWL11();ShowAll();"></td>
-<tr><td colspan=2>
-
-<table width="99%" border="0" cellspacing="0" cellpadding="0">
-<tbody>
-
-	<tr class="hl"><td><label for="ComplRoleIncl"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="ComplRoleIncl" id="ComplRoleIncl">
-			<em class="med">R</em> &ndash; complex role inclusions:
-			<span class="bl"><i>R</i><sub>&nbsp;</sub>o<sub>&nbsp;</sub><i>S</i>&nbsp;&sube;&nbsp;<i>R</i></span>,
-			<span class="bl"><i>R</i><sub>&nbsp;</sub>o<sub>&nbsp;</sub><i>S</i>&nbsp;&sube;&nbsp;<i>S</i></span>
-	</span></div></span></label></td></tr>
-
-	<tr class="hl"><td><label for="OtherStuff"><span><div><span class="nobr">
-		<input onClick="ShowAll()" type="checkbox" name="OtherStuff" id="OtherStuff" disabled>
-<em>s</em> &ndash; some additional features (click to see them)
-
-	</span></div></span></label></td></tr>
-
-</tbody>
-</table>
-
-</td></tr></table> -->
-
-
-<!-- <tr bgcolor="#eeeeee" valign="middle">
-<td style="border-right:0pt;border-radius:0px 0px 0px 6px;"><input
- type="button" value="Reset" onClick="AllReset()" style="color:red;"></td>
-<td align=right style="border-left:0pt;border-right:0pt">
-You have selected a Description Logic: <span id="CRNRField"></span>
-<td align="left" width="50%" style="border-left:0pt; border-radius:0px 0px 6px 0px;">
-
-<span id="LogicChosen" style="color:blue"></span>
-<span id="CRNRStatus"  style="color:green"></span> -->
 
 </table>
 </form>
