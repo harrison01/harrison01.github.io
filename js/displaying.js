@@ -1,36 +1,36 @@
 var  // Output strings
 
 SAMPSAMP = '';
-EVALSAMP = '';
-EVALEVAL = '';
-PRSAMP = '';
-PREVAL = '';
-PRPR = '';
+// EVALSAMP = '';
+// EVALEVAL = '';
+// PRSAMP = '';
+// PREVAL = '';
+// PRPR = '';
 DUALSAMP = '';
-DUALEVAL = '';
-DUALPR = '';
+// DUALEVAL = '';
+// DUALPR = '';
 DUALDUAL = '';
 PAIRSAMP = '';
-PAIREVAL = '';
-PAIRPR = '';
+// PAIREVAL = '';
+// PAIRPR = '';
 PAIRDUAL = '';
 PAIRPAIR = '';
 SUBSAMP = '';
-SUBEVAL = '';
-SUBPR = '';
+// SUBEVAL = '';
+// SUBPR = '';
 SUBDUAL = '';
 SUBPAIR = '';
 SUBSUB = '';
 CONDSAMP = '';
-CONDEVAL = '';
-CONDPR = '';
+// CONDEVAL = '';
+// CONDPR = '';
 CONDDUAL = '';
 CONDPAIR = '';
 CONDSUB = '';
 CONDCOND = '';
 FULLSAMP = '';
-FULLEVAL = '';
-FULLPR = '';
+// FULLEVAL = '';
+// FULLPR = '';
 FULLDUAL = '';
 FULLPAIR = '';
 FULLSUB = '';
@@ -50,36 +50,36 @@ function DisplayResults()
 {
 
  ShowID('sampSamp',SAMPSAMP);
- ShowID('evalSamp',EVALSAMP);
- ShowID('evalEval',EVALEVAL);
- ShowID('prSamp',PRSAMP);
- ShowID('prEVAL',PREVAL);
- ShowID('prPr',PRPR);
+//  ShowID('evalSamp',EVALSAMP);
+//  ShowID('evalEval',EVALEVAL);
+//  ShowID('prSamp',PRSAMP);
+//  ShowID('prEVAL',PREVAL);
+//  ShowID('prPr',PRPR);
  ShowID('dualSamp',DUALSAMP);
- ShowID('dualEval',DUALEVAL);
- ShowID('dualPr',DUALPR);
+//  ShowID('dualEval',DUALEVAL);
+//  ShowID('dualPr',DUALPR);
  ShowID('dualDual',DUALDUAL);
  ShowID('pairSamp',PAIRSAMP);
- ShowID('pairEval',PAIREVAL);
- ShowID('pairPr',PAIRPR);
+//  ShowID('pairEval',PAIREVAL);
+//  ShowID('pairPr',PAIRPR);
  ShowID('pairDual',PAIRDUAL);
  ShowID('pairPair',PAIRPAIR);
  ShowID('subSamp',SUBSAMP);
- ShowID('subEval',SUBEVAL);
- ShowID('subrPr',SUBPR);
+//  ShowID('subEval',SUBEVAL);
+//  ShowID('subrPr',SUBPR);
  ShowID('subDual',SUBDUAL);
  ShowID('subPair',SUBPAIR);
  ShowID('subSub',SUBSUB);
  ShowID('condSamp',CONDSAMP);
- ShowID('condEval',CONDEVAL);
- ShowID('condPr',CONDPR);
+//  ShowID('condEval',CONDEVAL);
+//  ShowID('condPr',CONDPR);
  ShowID('condDual',CONDDUAL);
  ShowID('condPair',CONDPAIR);
  ShowID('condSub',CONDSUB);
  ShowID('condCond',CONDCOND);
  ShowID('fullSamp',FULLSAMP);
- ShowID('fullEval',FULLEVAL);
- ShowID('fullPr',FULLPR);
+//  ShowID('fullEval',FULLEVAL);
+//  ShowID('fullPr',FULLPR);
  ShowID('fullDual',FULLDUAL);
  ShowID('fullPair',FULLPAIR);
  ShowID('fullSub',FULLSUB);
@@ -229,8 +229,8 @@ function CreateBibTeXLink(refID)
 
 function CreateAbstractBibTeXLinks(refID)
 {
- CreateAbstractLink(refID);
- document.writeln(' | ');
+//  CreateAbstractLink(refID);
+//  document.writeln(' | ');
  CreateBibTeXLink(refID);
 }
 
