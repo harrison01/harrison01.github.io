@@ -9,6 +9,11 @@ TBox_2IsTv = inp_2[0]
 TBox_2IsInfty = inp_2[1]
 TBox_2IsZero = inp_2[2]
 
+TBox_3IsUB = inp_3[0]
+TBox_3IsLB = inp_3[1]
+
+if (TBox_3IsUB)
+{
 if (TBox_1IsTv && TBox_2IsTv)
 {
     SAMPSAMP = "\\mathcal{O}\\left(\\max\\left(\\frac{\\sqrt{n}}{\\varepsilon^2}, \\frac{n^{2/3}}{\\varepsilon^{4/3}}\\right)\\right)";
@@ -39,7 +44,12 @@ if (TBox_1IsTv && TBox_2IsZero)
     return;
 
 }
+}
 
+else if (TBox_3IsLB)
+{
+
+}
 
 
 }

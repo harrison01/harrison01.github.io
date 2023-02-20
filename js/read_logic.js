@@ -22,12 +22,12 @@ Infty_2 = "Infty_2";
 Zero_1 = "Zero_1";
 Hellinger_2 = "Hellinger_2";
 
-UB = "UB";
-LB = "LB";
+UpBnd = "UB";
+LoBnd = "LB";
 
 InterTB = "InternalizedTBox";
 
-TBoxOption=Tv_1;
+// TBoxOption=Tv_1;
 
 //TBoxIsTv_1=false;
 //TBoxIsTv_2=false;
@@ -59,8 +59,8 @@ function ReadInput() // Read the form into the boolean variables
   TBox_2IsInfty = (TBoxOption_2==Infty_2);
   TBox_2IsHellinger = (TBoxOption_2==Hellinger_2);
 
-  TBox_3IsUB = (TBoxOption_3==UB);
-  TBox_3IsLB = (TBoxOption_3==LB);
+  TBox_3IsUB = (TBoxOption_3==UpBnd);
+  TBox_3IsLB = (TBoxOption_3==LoBnd);
 
 
   return [[TBox_1IsTv, TBox_1IsInfty, TBox_1IsZero],[TBox_2IsTv, TBox_2IsInfty, TBox_2IsHellinger],[TBox_3IsLB,TBox_3IsUB]]
