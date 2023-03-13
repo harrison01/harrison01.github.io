@@ -16,13 +16,26 @@ if (TBox_3IsUB)
 {
 if (TBox_1IsZero && TBox_2IsTv)
 {
-    SAMPSAMP = "O\\left(\\max\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}, \\frac{N^{2/3}}{\\varepsilon^{4/3}}\\right)\\right)";
+    SAMPSAMP = 'O\\left(\\max\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}, \\frac{N^{2/3}}{\\varepsilon^{4/3}}\\right)\\right)';
+    SAMPSAMPRef = 'see [' + batu2013testing + ']';
     DUALSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
+    DUALSAMPRef = '';
+    PAIRSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
+    PAIRSAMPRef = '';
+    SUBSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
+    SUBSAMPRef = '';
+    CONDSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
+    CONDSAMPRef = '';
+    FULLSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
+    FULLSAMPref = 'see [' + valiant2017automatic + ']';
+
     DUALDUAL = '';
+    DUALDUALRef = '';
     PAIRSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
     SUBSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
     CONDSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
     FULLSAMP = 'O\\left(\\frac{\\sqrt{N}}{\\varepsilon^2}\\right)';
+
     return;
 
 }

@@ -37,54 +37,57 @@ FULLSUB = '';
 FULLCOND = '';
 FULLFULL = '';
 
+SAMPSAMPRef = '';
+DUALSAMPRef = '';
+FULLSAMPref = '';
 
 // ===============================================================================================
 
-function ShowID(ID,iHTML)
+function ShowID(ID,iHTML, RefComment)
 {
- document.getElementById(ID).innerHTML=katex.renderToString(iHTML);
+ document.getElementById(ID).innerHTML=katex.renderToString(iHTML) + RefComment;
 }
 
 
 function DisplayResults()
 {
 
- ShowID('sampSamp',SAMPSAMP);
+ ShowID('sampSamp',SAMPSAMP, SAMPSAMPRef);
 //  ShowID('evalSamp',EVALSAMP);
 //  ShowID('evalEval',EVALEVAL);
 //  ShowID('prSamp',PRSAMP);
 //  ShowID('prEVAL',PREVAL);
 //  ShowID('prPr',PRPR);
- ShowID('dualSamp',DUALSAMP);
+ ShowID('dualSamp',DUALSAMP, DUALSAMPRef);
 //  ShowID('dualEval',DUALEVAL);
 //  ShowID('dualPr',DUALPR);
- ShowID('dualDual',DUALDUAL);
- ShowID('pairSamp',PAIRSAMP);
+ ShowID('dualDual',DUALDUAL, 'todo');
+ ShowID('pairSamp',PAIRSAMP,  PAIRSAMPRef);
 //  ShowID('pairEval',PAIREVAL);
 //  ShowID('pairPr',PAIRPR);
- ShowID('pairDual',PAIRDUAL);
- ShowID('pairPair',PAIRPAIR);
- ShowID('subSamp',SUBSAMP);
+ ShowID('pairDual',PAIRDUAL, 'todo');
+ ShowID('pairPair',PAIRPAIR, 'todo');
+ ShowID('subSamp',SUBSAMP, SUBSAMPRef);
 //  ShowID('subEval',SUBEVAL);
 //  ShowID('subrPr',SUBPR);
- ShowID('subDual',SUBDUAL);
- ShowID('subPair',SUBPAIR);
- ShowID('subSub',SUBSUB);
- ShowID('condSamp',CONDSAMP);
+ ShowID('subDual',SUBDUAL, 'todo');
+ ShowID('subPair',SUBPAIR, 'todo');
+ ShowID('subSub',SUBSUB, 'todo');
+ ShowID('condSamp',CONDSAMP, CONDSAMPRef);
 //  ShowID('condEval',CONDEVAL);
 //  ShowID('condPr',CONDPR);
- ShowID('condDual',CONDDUAL);
- ShowID('condPair',CONDPAIR);
- ShowID('condSub',CONDSUB);
- ShowID('condCond',CONDCOND);
- ShowID('fullSamp',FULLSAMP);
+ ShowID('condDual',CONDDUAL, 'todo');
+ ShowID('condPair',CONDPAIR, 'todo');
+ ShowID('condSub',CONDSUB, 'todo');
+ ShowID('condCond',CONDCOND, 'todo');
+ ShowID('fullSamp',FULLSAMP, FULLSAMPref);
 //  ShowID('fullEval',FULLEVAL);
 //  ShowID('fullPr',FULLPR);
- ShowID('fullDual',FULLDUAL);
- ShowID('fullPair',FULLPAIR);
- ShowID('fullSub',FULLSUB);
- ShowID('fullCond',FULLCOND);
- ShowID('fullFull',FULLFULL);
+ ShowID('fullDual',FULLDUAL, 'todo');
+ ShowID('fullPair',FULLPAIR, 'todo');
+ ShowID('fullSub',FULLSUB, 'todo');
+ ShowID('fullCond',FULLCOND, 'todo');
+ ShowID('fullFull',FULLFULL, 'todo');
 
 
 }
@@ -104,6 +107,16 @@ function ShowAll()
  inp = ReadInput();
  console.log(inp);
  ShowComplexity(inp[0], inp[1], inp[2]);
+ 
+ const requestURL = './data.json';
+  const request = new Request(requestURL);
+
+  const response = fetch(request);
+  const superHeroesText = response.text();
+
+  const superHeroes = JSON.parse(superHeroesText);
+  console.log(superHeroes);
+//   populateHeroes(superHeroes);
 }
 
 
