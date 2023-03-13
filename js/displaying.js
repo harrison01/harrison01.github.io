@@ -40,6 +40,11 @@ FULLFULL = '';
 SAMPSAMPRef = '';
 DUALSAMPRef = '';
 FULLSAMPref = '';
+PAIRSAMPRef = '';
+SUBSAMPRef = '';
+CONDSAMPRef = '';
+
+import data from './data.json';
 
 // ===============================================================================================
 
@@ -105,18 +110,20 @@ function ShowComplexity(inp_1, inp_2, inp_3)
 function ShowAll()
 {
  inp = ReadInput();
- console.log(inp);
+//  console.log(inp);
  ShowComplexity(inp[0], inp[1], inp[2]);
  
- const requestURL = './data.json';
-  const request = new Request(requestURL);
+//  const requestURL = './data.json';
+//   const request = new Request(requestURL);
 
-  const response = fetch(request);
-  const superHeroesText = response.text();
+//   const response = fetch(request);
+//   const superHeroesText = response.text();
+  
 
-  const superHeroes = JSON.parse(superHeroesText);
-  console.log(superHeroes);
+//   const superHeroes = JSON.parse(superHeroesText);
+//   console.log(superHeroes.squadName);
 //   populateHeroes(superHeroes);
+   console.log(data)
 }
 
 
