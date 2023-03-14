@@ -44,7 +44,6 @@ PAIRSAMPRef = '';
 SUBSAMPRef = '';
 CONDSAMPRef = '';
 
-import data from './data.json';
 
 // ===============================================================================================
 
@@ -123,7 +122,6 @@ function ShowAll()
 //   const superHeroes = JSON.parse(superHeroesText);
 //   console.log(superHeroes.squadName);
 //   populateHeroes(superHeroes);
-   console.log(data)
 }
 
 
