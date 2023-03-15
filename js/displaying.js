@@ -47,9 +47,9 @@ CONDSAMPRef = '';
 
 // ===============================================================================================
 
-function ShowID(ID,iHTML, RefComment)
+function ShowID(ID,iHTML, comment)
 {
- document.getElementById(ID).innerHTML=katex.renderToString(iHTML) + RefComment;
+ document.getElementById(ID).innerHTML=katex.renderToString(iHTML) + comment;
 }
 
 
@@ -65,33 +65,33 @@ function DisplayResults()
  ShowID('dualSamp',DUALSAMP, DUALSAMPRef);
 //  ShowID('dualEval',DUALEVAL);
 //  ShowID('dualPr',DUALPR);
- ShowID('dualDual',DUALDUAL, 'todo');
+ ShowID('dualDual',DUALDUAL, DUALDUALRef);
  ShowID('pairSamp',PAIRSAMP,  PAIRSAMPRef);
 //  ShowID('pairEval',PAIREVAL);
 //  ShowID('pairPr',PAIRPR);
- ShowID('pairDual',PAIRDUAL, 'todo');
- ShowID('pairPair',PAIRPAIR, 'todo');
+ ShowID('pairDual',PAIRDUAL, PAIRDUALRef);
+ ShowID('pairPair',PAIRPAIR, PAIRPAIRRef);
  ShowID('subSamp',SUBSAMP, SUBSAMPRef);
 //  ShowID('subEval',SUBEVAL);
 //  ShowID('subrPr',SUBPR);
- ShowID('subDual',SUBDUAL, 'todo');
- ShowID('subPair',SUBPAIR, 'todo');
- ShowID('subSub',SUBSUB, 'todo');
+ ShowID('subDual',SUBDUAL, SUBDUALRef);
+ ShowID('subPair',SUBPAIR, SUBPAIRRef);
+ ShowID('subSub',SUBSUB, SUBSUBRef);
  ShowID('condSamp',CONDSAMP, CONDSAMPRef);
 //  ShowID('condEval',CONDEVAL);
 //  ShowID('condPr',CONDPR);
- ShowID('condDual',CONDDUAL, 'todo');
- ShowID('condPair',CONDPAIR, 'todo');
- ShowID('condSub',CONDSUB, 'todo');
- ShowID('condCond',CONDCOND, 'todo');
+ ShowID('condDual',CONDDUAL, CONDDUALRef);
+ ShowID('condPair',CONDPAIR, CONDPAIRRef);
+ ShowID('condSub',CONDSUB, CONDSUBRef);
+ ShowID('condCond',CONDCOND, CONDCONDRef);
  ShowID('fullSamp',FULLSAMP, FULLSAMPref);
 //  ShowID('fullEval',FULLEVAL);
 //  ShowID('fullPr',FULLPR);
- ShowID('fullDual',FULLDUAL, 'todo');
- ShowID('fullPair',FULLPAIR, 'todo');
- ShowID('fullSub',FULLSUB, 'todo');
- ShowID('fullCond',FULLCOND, 'todo');
- ShowID('fullFull',FULLFULL, 'todo');
+ ShowID('fullDual',FULLDUAL, FULLDUALRef);
+ ShowID('fullPair',FULLPAIR, FULLPAIRRef);
+ ShowID('fullSub',FULLSUB, FULLSUBRef);
+ ShowID('fullCond',FULLCOND, FULLCONDRef);
+//  ShowID('fullFull',FULLFULL, 'todo');
 
 
 }

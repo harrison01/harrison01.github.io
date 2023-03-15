@@ -25,6 +25,7 @@
 <script type="text/javascript" src="js/read_logic.js"></script>
 <script type="text/javascript" src="js/displaying.js"></script>
 <script type="text/javascript" src="js/queryComplexity.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
 
  <!-- Set up mathjax -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -47,7 +48,7 @@
 <table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
 <tr>
 <td width="150"><a href="http://127.0.0.1/" title="Homepage"><img
- align="left" width="130" height="120" border="0" alt="Logo" src="dl_logo.gif"></a></td>
+ align="left" width="200" height="120" border="0" alt="Logo" src="logo.png"></a></td>
 <td align="center">
 <h1 style="margin-top:5pt;margin-bottom:3pt">Models of Distribution Testing</h1>
 <div style="font-size:10pt;font-weight:bold;text-align:center;margin-bottom:7pt">
@@ -70,7 +71,7 @@ Note: the information here is (always) incomplete and
 <br>It corresponds to the multi-modal logic <b>K<sub>m</sub></b>
 </td></tr></table> -->
 <td width="150"><a href="http://127.0.0.1/" title="Homepage"><img
- align="left" width=130 height=120 border="0" alt="Logo" src="dl_logo.gif"></a></td>
+ align="left" width=200 height=120 border="0" alt="Logo" src="logo.png"></a></td>
 </table>
 
 <form name="LogicForm" style="margin-top:3pt;margin-bottom:3pt">
@@ -86,7 +87,7 @@ Note: the information here is (always) incomplete and
 
                 <tr class="hl">
                         <td><label for="TB1"><span><div><span class="nobr">
-                                <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB1" value="Tv_1" checked> \(d_{TV}\) 
+                                <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB1" value="Tv_1"> \(d_{TV}\) 
                         </span></div></span></label></td>
                 </tr>
                <tr class="hl">
@@ -97,7 +98,7 @@ Note: the information here is (always) incomplete and
 
 		<tr class="hl">
                         <td><label for="TB3"><span><div><span class="nobr">
-                                <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB3" value="Zero_1"> \(0\)
+                                <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB3" value="Zero_1" checked> \(0\)
                         </span></div></span></label></td>
                 </tr>
 		</td>
@@ -197,7 +198,7 @@ Query Complexity of Model vs Model setup
 <td width="15%" align="center">PAIRCOND
 <td width="15%" align="center">SUBCOND
 <td width="15%" align="center">COND
-<td width="15%" align="center">FULL
+<!-- <td width="15%" align="center">FULL -->
 	
 <!-- <td width="18%" align="center"><span class="nobr"><b><span id="ConcSatC">&nbsp;</span></b></span>
 <td width="70%"><span id="ConcSatR">&nbsp;</span> -->
@@ -260,7 +261,7 @@ Query Complexity of Model vs Model setup
 <td><span id="fullPair">&nbsp;</span>
 <td><span id="fullSub">&nbsp;</span>
 <td><span id="fullCond">&nbsp;</span>
-<td><span id="fullFull">&nbsp;</span>
+<!-- <td><span id="fullFull">&nbsp;</span> -->
 
 
 <!--
@@ -545,4 +546,160 @@ year      = {2017}
         <a href="">Paul Valiant</a>,
 </div>
 
+
+<li><script type="text/javascript">var nar2020cond; CreateRefLink('nar2020cond');</script>
+<span class="paper_title">
+        On Distribution Testing in the Conditional Sampling Model
+</span>
+<span class="paper_link">
+                        [ <a href="https://arxiv.org/pdf/2007.09895.pdf">ArXiv</a> |
+                        <script type="text/javascript">CreateAbstractBibTeXLinks('nar2020cond');</script> ]
+</span>
+<div class="bibtex" id="nar2020cond_bibtex">@article{narayanan2020distribution,
+        author    = {Shyam Narayanan},
+        title     = {Tolerant Distribution Testing in the Conditional Sampling Model},
+        journal   = {CoRR},
+        volume    = {abs/2007.09895},
+        year      = {2020}
+        }</div>
+<div class="paper_authors">
+        <a href="https://sites.google.com/view/shyamnarayanan/home">Shyam Narayanan</a>
+</div>
+        
+        
+<li><script type="text/javascript">var bc18; CreateRefLink('bc18');</script>
+<span class="paper_title">
+        Property Testing of Joint Distributions using Conditional Samples
+</span>
+<span class="paper_link">
+                        [ <a href="https://arxiv.org/pdf/1702.01454v2.pdf">ArXiv</a> |
+                        <script type="text/javascript">CreateAbstractBibTeXLinks('bc18');</script> ]
+</span>
+<div class="bibtex" id="bc18_bibtex">@article{bhattacharyya2018property,
+        author    = {Rishiraj Bhattacharyya and
+                     Sourav Chakraborty},
+        title     = {Property Testing of Joint Distributions using Conditional Samples},
+        journal   = {CoRR},
+        volume    = {abs/1702.01454},
+        year      = {2017}
+      }</div>
+<div class="paper_authors">
+        <a href="https://rishirajb.github.io/">Rishiraj Bhattacharyya</a>,
+        <a href="https://www.isical.ac.in/~sourav/">Sourav Chakraborty</a>
+</div>
+
+
+<li><script type="text/javascript">var canonne2017testing; CreateRefLink('canonne2017testing');</script>
+        <span class="paper_title">
+                Testing Bayesian Networks
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://arxiv.org/pdf/1612.03156.pdf">ArXiv</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('canonne2017testing');</script> ]
+        </span>
+        <div class="bibtex" id="canonne2017testing_bibtex">@inproceedings{canonne2017testing,
+                title={Testing bayesian networks},
+                author={Canonne, Cl{\'e}ment L and Diakonikolas, Ilias and Kane, Daniel M and Stewart, Alistair},
+                booktitle={Conference on Learning Theory},
+                pages={370--448},
+                year={2017},
+                organization={PMLR}
+              }</div>
+        <div class="paper_authors">
+                <a href="https://ccanonne.github.io/">Clement L. Canonne</a> ,
+                <a href="http://www.iliasdiakonikolas.org/"> Ilias Diakonikolas</a>,
+                <a href="https://cseweb.ucsd.edu/~dakane/"> Daniel M. Kane</a>,
+                <a href="">Alistair Stewart</a>
+        </div>
+                
+<li><script type="text/javascript">var canonne2015testing; CreateRefLink('canonne2015testing');</script>
+        <span class="paper_title">
+                Testing probability distributions using conditional samples
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://arxiv.org/pdf/1211.2664/">ArXiv</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('canonne2015testing');</script> ]
+        </span>
+        <div class="bibtex" id="canonne2015testing_bibtex">@article{canonne2015testing,
+                title={Testing probability distributions using conditional samples},
+                author={Canonne, Cl{\'e}ment L and Ron, Dana and Servedio, Rocco A},
+                journal={SIAM Journal on Computing},
+                volume={44},
+                number={3},
+                pages={540--616},
+                year={2015},
+                publisher={SIAM}
+              }</div>
+        <div class="paper_authors">
+                <a href="https://ccanonne.github.io/">Clement L. Canonne </a> ,
+                <a href="https://www.danaron.sites.tau.ac.il/"> Dana Ron</a>,
+                <a href="https://www.cs.columbia.edu/~rocco/"> Rocco A. Servedio</a>,
+        </div>
+
+<li><script type="text/javascript">var chakraborty2013power; CreateRefLink('chakraborty2013power');</script>
+        <span class="paper_title">
+                On the power of conditional samples in distribution testing
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://arxiv.org/pdf/1210.8338.pdf">ArXiv</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('chakraborty2013power');</script> ]
+        </span>
+        <div class="bibtex" id="chakraborty2013power_bibtex">@inproceedings{chakraborty2013power,
+                title={On the power of conditional samples in distribution testing},
+                author={Chakraborty, Sourav and Fischer, Eldar and Goldhirsh, Yonatan and Matsliah, Arie},
+                booktitle={Proceedings of the 4th conference on Innovations in Theoretical Computer Science},
+                pages={561--580},
+                year={2013}
+              }</div>
+        <div class="paper_authors">
+                <a href="https://www.isical.ac.in/~sourav/">Sourav Chakraborty </a> ,
+                <a href=""> Eldar Fischer</a>,
+                <a href=""> Yonatan Goldhirsh</a>,
+                <a href="https://www.crocopotam.com/">Arie Matsliah</a>
+        </div>                
+        
+
+<li><script type="text/javascript">var potescalable; CreateRefLink('potescalable');</script>
+        <span class="paper_title">
+                On Scalable Testing of Samplers
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://openreview.net/pdf?id=qHs3qeaQjgl">OpenReview</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('potescalable');</script> ]
+        </span>
+        <div class="bibtex" id="potescalable_bibtex">@inproceedings{potescalable,
+                title={On Scalable Testing of Samplers},
+                author={Pote, Yash and Meel, Kuldeep S},
+                booktitle={Advances in Neural Information Processing Systems}
+              }</div>
+        <div class="paper_authors">
+                <a href="https://yashpote.github.io/">Yash Pote</a> ,
+                <a href="https://www.crocopotam.com/">Kuldeep S. Meel</a>
+        </div>               
+        
+<li><script type="text/javascript">var falahatgar2015faster; CreateRefLink('falahatgar2015faster');</script>
+        <span class="paper_title">
+                Faster Algorithms for Testing under Conditional Sampling
+        </span>
+        <span class="paper_link">
+                                [ <a href="http://proceedings.mlr.press/v40/Falahatgar15.pdf">PMLR</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('falahatgar2015faster');</script> ]
+        </span>
+        <div class="bibtex" id="falahatgar2015faster_bibtex">@inproceedings{falahatgar2015faster,
+                title={Faster algorithms for testing under conditional sampling},
+                author={Falahatgar, Moein and Jafarpour, Ashkan and Orlitsky, Alon and Pichapati, Venkatadheeraj and Suresh, Ananda Theertha},
+                booktitle={Conference on Learning Theory},
+                pages={607--636},
+                year={2015},
+                organization={PMLR}
+                }</div>
+        <div class="paper_authors">
+                <a href="">Moein Falahatgar </a> ,
+                <a href="">Ashkan Jafarpour</a>,
+                <a href="">Alon Orlitsky</a>,
+                <a href="">Venkatadheeraj Pichapati</a>,
+                <a href="">Ananda Theertha Suresh</a>
+        </div>               
+                
+        
 <div style="display: none;">
