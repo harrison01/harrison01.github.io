@@ -293,8 +293,8 @@ function FinishContent()
 }
 
 
-function NoSpamMail(sobaka)
+function NoSpamMail(s)
 {
-var MailString='mailto:'+'ezolin'+sobaka+'cs.man.ac.uk?subject=DL%20Complexity%20Navigator&body=Hi%20Evgeny!';
+var MailString='Current Maintainers: '+'uddaloksarkar'+sobaka+'gmail.com?subject=Distribution%20Testing%20Navigator';
  location.href=MailString;
 }
