@@ -44,12 +44,31 @@ PAIRSAMPRef = '';
 SUBSAMPRef = '';
 CONDSAMPRef = '';
 
+var comvar = '';
+
 
 // ===============================================================================================
 
-function ShowID(ID,iHTML, comment)
+function ShowID(ID,iHTML)
 {
- document.getElementById(ID).innerHTML=katex.renderToString(iHTML) + comment;
+ document.getElementById(ID).innerHTML=katex.renderToString(iHTML);
+}
+
+
+function showComment(comment){
+   document.getElementById('resultcomment').innerHTML= comment;
+}
+
+function displayComments(){
+   with(document.commentForm){
+      comvar = checkedvalue(combaton);
+   }
+   if(comvar == 'sampSamp'){
+      showComment(complComment["ubSAMPSAMP"]);
+   }
+   else if (comvar == 'dualSamp'){
+      showComment(complComment["ubDUALSAMP"]);
+   }
 }
 
 
@@ -111,6 +130,8 @@ function ShowAll()
  inp = ReadInput();
 //  console.log(inp);
  ShowComplexity(inp[0], inp[1], inp[2]);
+
+ displayComments();
  
 //  const requestURL = './data.json';
 //   const request = new Request(requestURL);

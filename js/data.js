@@ -21,14 +21,14 @@ let complexity = {
     "ubFULLCOND" : 'O\\left(\\frac{1}{\\varepsilon^2}\\right)'
 }
 
-// let comment = {
-//     "ubSAMPSAMP" : 'Theorem * of',
-//     "ubDUALSAMP" : 'Follows from up',
-//     "ubPAIRSAMP" : 'Follows from up',
-//     "ubCONDSAMP" : 'Follows from up',
-//     "ubSUBSAMP" : 'Follows from up',
-//     "ubFULLSAMP" : 'Follows from up',
-// }
+let complComment = {
+    "ubSAMPSAMP" : 'Theorem * of',
+    "ubDUALSAMP" : 'Follows from up',
+    "ubPAIRSAMP" : 'Follows from up',
+    "ubCONDSAMP" : 'Follows from up',
+    "ubSUBSAMP" : 'Follows from up',
+    "ubFULLSAMP" : 'Follows from up',
+}
 
 // let reference = {
 //     "ubSAMPSAMP" : batu2013testing,

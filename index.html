@@ -177,6 +177,8 @@ Note: the information here is (always) incomplete and
 
 <!-- ======================== ANSWERS ============================================================== -->
 
+<form name="commentForm" style="margin-top:3pt;margin-bottom:3pt">
+
 <table width="99%" border="1" cellspacing="0" cellpadding=3 align="center" style="border-radius:7px 7px 7px 7px;">
 <thead><th colspan="9" align="center" bgcolor="#eebbbb" style="border-radius:6px 6px 0px 0px;">
 Query Complexity of Model vs Model setup
@@ -204,7 +206,7 @@ Query Complexity of Model vs Model setup
 <td width="70%"><span id="ConcSatR">&nbsp;</span> -->
 
 <tr><td align="center">SAMP
-<td align="center"><span class="nobr"><b><span id="sampSamp">&nbsp;</span></b></span>
+<td align="center"><span class="nobr"><span id="sampSamp">&nbsp;</span><input onClick="displayComments()" type=radio id="com" name="combaton" value="sampSamp" checked></span>
 <!-- [<a target="_self" style="color:blue" href="javascript:void(0);" onmouseover="window.status=OMOString+1+OMOEnd;return true;" onmouseout="window.status=EmptyString;" onclick="GoToRef('batu2013testing_Anchor');">1</a>] -->
 
 <!-- <tr><td align="center">EVAL
@@ -218,7 +220,7 @@ Query Complexity of Model vs Model setup
 
 	
 <tr><td align="center">DUAL
-<td align="center"><span class="nobr"><b><span id="dualSamp">&nbsp;</span></b></span>
+<td align="center"><span class="nobr"><b><span id="dualSamp">&nbsp;</span></b><input onClick="displayComments()" type=radio id="com" name="combaton" value="dualSamp"></span>
 <!-- <td><span id="dualEval">&nbsp;</span>
 <td><span id="dualPr">&nbsp;</span> -->
 <td><span id="dualDual">&nbsp;</span>
@@ -295,8 +297,8 @@ Important properties of the Description Logic -->
 
 <table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
 <tbody valign="middle"><tr>
-<td align="left">Maintained by: <a href="../">Uddalok Sarkar and Yash Pote</a><br>
-Please see the <a title="Updates of the Navigator"
+<td align="left">Maintained by: <a href="https://github.com/uddaloksarkar">Uddalok Sarkar</a> and <a href="yashpote.com">Yash Pote</a><br>
+<!-- Please see the <a title="Updates of the Navigator"
 href="news.html">list of updates</a>
 <td align=right>
 Comments/suggestions are welcome:<br>
@@ -315,9 +317,10 @@ Comments/suggestions are welcome:<br>
 <a href="javascript:void(0);" title="Send me a mail!"
 onMouseOver="window.status='Send me a mail!';return true;"
 onMouseOut="window.status='';return true;"
- onClick="NoSpamMail('@');"></a>
+ onClick="NoSpamMail('@');"></a> -->
 </table>
 
+</form>
 <!--
 <br>
 <br>
@@ -329,6 +332,13 @@ The term "beta" is<br>an abbreviation for<br>"beta than nothing",
 Guy Kawasaki<br> "The Macintosh Way"
 </table>
 -->
+
+<!-- =======================================COMMENTS=============================-->
+<hr>
+
+<div class="comments" align="center">
+        <span id="resultcomment">&nbsp;</span>
+</div>
 
 <!-- ======================================= NOTES ============================== -->
 <!--

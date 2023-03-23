@@ -101,3 +101,16 @@ hr.dashes {
 }
 
 .bibtex a {color:black;}
+
+.comments {
+   border:3px dashed rgb(121, 86, 86);
+   border-radius: 15px;
+   padding: 7px;
+   margin: auto;
+   color: #111155;
+   font-size:11pt;
+   font-family:monospace;
+   white-space:pre;
+   text-align:center;
+   width: 850px;
+}
