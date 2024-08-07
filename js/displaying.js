@@ -58,7 +58,6 @@ function ShowID(ID,iHTML)
 function showComment(comment){
    document.getElementById('resultcomment').innerHTML= comment;
 }
-
 function displayComments(){
    with(document.commentForm){
       comvar = checkedvalue(combaton);
@@ -68,6 +67,60 @@ function displayComments(){
    }
    else if (comvar == 'dualSamp'){
       showComment(complComment["ubDUALSAMP"]);
+   }
+   else if (comvar == 'dualDual'){
+      showComment(complComment["ubDUALDUAL"]);
+   }
+   else if (comvar == 'pairSamp'){
+      showComment(complComment["ubPAIRSAMP"]);
+   }
+   else if (comvar == 'pairDual'){
+      showComment(complComment["ubPAIRDUAL"]);
+   }
+   else if (comvar == 'pairPair'){
+      showComment(complComment["ubPAIRPAIR"]);
+   }
+   else if (comvar == 'subSamp'){
+      showComment(complComment["ubSUBSAMP"]);
+   }
+   else if (comvar == 'subDual'){
+      showComment(complComment["ubSUBDUAL"]);
+   }
+   else if (comvar == 'subPair'){
+      showComment(complComment["ubSUBPAIR"]);
+   }
+   else if (comvar == 'subSub'){
+      showComment(complComment["ubSUBSUB"]);
+   }
+   else if (comvar == 'condSamp'){
+      showComment(complComment["ubCONDSAMP"]);
+   }
+   else if (comvar == 'condDual'){
+      showComment(complComment["ubCONDDUAL"]);
+   }
+   else if (comvar == 'condPair'){
+      showComment(complComment["ubCONDPAIR"]);
+   }
+   else if (comvar == 'condSub'){
+      showComment(complComment["ubCONDSUB"]);
+   }
+   else if (comvar == 'condCond'){
+      showComment(complComment["ubCONDCOND"]);
+   }
+   else if (comvar == 'fullSamp'){
+      showComment(complComment["ubFULLSAMP"]);
+   }
+   else if (comvar == 'fullDual'){
+      showComment(complComment["ubFULLDUAL"]);
+   }
+   else if (comvar == 'fullPair'){
+      showComment(complComment["ubFULLPAIR"]);
+   }
+   else if (comvar == 'fullSub'){
+      showComment(complComment["ubFULLSUB"]);
+   }
+   else if (comvar == 'fullCond'){
+      showComment(complComment["ubFULLCOND"]);
    }
 }
 

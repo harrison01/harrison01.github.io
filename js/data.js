@@ -10,13 +10,13 @@ let complexity = {
     "ubCONDDUAL" : 'O\\left(\\frac{\\log{N}}{\\varepsilon^2} + \\frac{\\sqrt{N}\\log{N}}{\\varepsilon^4}\\right)',
     "ubSUBDUAL" : '',
     "ubFULLDUAL" : 'O\\left(\\frac{1}{\\varepsilon}\\right)',
-    "ubPAIRPAIR" : 'O\\left(\\frac{\\log^6{N}}{\\varepsilon^21}\\right)',
+    "ubPAIRPAIR" : 'O\\left(\\frac{\\log^6{N}}{\\varepsilon^{21}}\\right)',
     "ubSUBPAIR" : '',
-    "ubCONDPAIR" : 'O\\left(\\frac{\\log^6{N}}{\\varepsilon^21}\\right)',
+    "ubCONDPAIR" : 'O\\left(\\frac{\\log^6{N}}{\\varepsilon^{21}}\\right)',
     "ubFULLPAIR" : 'O\\left(\\frac{\\sqrt{\\log{N}}}{\\varepsilon^2}\\right)',
-    "ubSUBSUB" : 'O\\left(\\frac{n^5\\log{\\log{|\\Sigma|}}}{\\varepsilon^5}\\right)',
+    "ubSUBSUB" : 'O\\left(\\frac{\\log^3{N}}{\\varepsilon^4}\\right)',
     "ubCONDSUB" : '',
-    "ubFULLSUB" : 'O\\left(\\frac{n^2}{\\varepsilon^2}\\right)',
+    "ubFULLSUB" : 'O\\left(\\frac{\\log^2{N}}{\\varepsilon^4}\\right)',
     "ubCONDCOND" : 'O\\left(\\frac{\\log{\\log{N}}}{\\varepsilon^5}\\right)',
     "ubFULLCOND" : 'O\\left(\\frac{1}{\\varepsilon^2}\\right)'
 }
@@ -24,10 +24,24 @@ let complexity = {
 let complComment = {
     "ubSAMPSAMP" : 'Theorem * of',
     "ubDUALSAMP" : 'Follows from up',
-    "ubPAIRSAMP" : 'Follows from up',
+    "ubPAIRSAMP" : 'Follows from what?',
     "ubCONDSAMP" : 'Follows from up',
     "ubSUBSAMP" : 'Follows from up',
     "ubFULLSAMP" : 'Follows from up',
+    "ubDUALDUAL" : 'Follows from up',
+    "ubPAIRDUAL" : 'Follows from up',
+    "ubSUBDUAL" : 'Follows from up',
+    "ubCONDDUAL" : 'Follows from up',
+    "ubFULLDUAL" : 'Follows from up',
+    "ubPAIRPAIR" : 'Follows from up',
+    "ubSUBPAIR" : 'Follows from up',
+    "ubCONDPAIR" : 'Follows from up',
+    "ubFULLPAIR" : 'Follows from up',
+    "ubSUBSUB" : 'Follows from up',
+    "ubCONDSUB" : 'Follows from up',
+    "ubFULLSUB" : 'Follows from Theorem 11 of "Testing Self-Reducible Samplers"',
+    "ubCONDCOND" : 'Follows from up',
+    "ubFULLCOND" : 'Follows from up'    
 }
 
 // let reference = {
