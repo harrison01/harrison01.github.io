@@ -63,64 +63,64 @@ function displayComments(){
       comvar = checkedvalue(combaton);
    }
    if(comvar == 'sampSamp'){
-      showComment(complComment["ubSAMPSAMP"]);
+      showComment(complComment["SAMPSAMP"]);
    }
    else if (comvar == 'dualSamp'){
-      showComment(complComment["ubDUALSAMP"]);
+      showComment(complComment["DUALSAMP"]);
    }
    else if (comvar == 'dualDual'){
-      showComment(complComment["ubDUALDUAL"]);
+      showComment(complComment["DUALDUAL"]);
    }
    else if (comvar == 'pairSamp'){
-      showComment(complComment["ubPAIRSAMP"]);
+      showComment(complComment["PAIRSAMP"]);
    }
    else if (comvar == 'pairDual'){
-      showComment(complComment["ubPAIRDUAL"]);
+      showComment(complComment["PAIRDUAL"]);
    }
    else if (comvar == 'pairPair'){
-      showComment(complComment["ubPAIRPAIR"]);
+      showComment(complComment["PAIRPAIR"]);
    }
    else if (comvar == 'subSamp'){
-      showComment(complComment["ubSUBSAMP"]);
+      showComment(complComment["SUBSAMP"]);
    }
    else if (comvar == 'subDual'){
-      showComment(complComment["ubSUBDUAL"]);
+      showComment(complComment["SUBDUAL"]);
    }
    else if (comvar == 'subPair'){
-      showComment(complComment["ubSUBPAIR"]);
+      showComment(complComment["SUBPAIR"]);
    }
    else if (comvar == 'subSub'){
-      showComment(complComment["ubSUBSUB"]);
+      showComment(complComment["SUBSUB"]);
    }
    else if (comvar == 'condSamp'){
-      showComment(complComment["ubCONDSAMP"]);
+      showComment(complComment["CONDSAMP"]);
    }
    else if (comvar == 'condDual'){
-      showComment(complComment["ubCONDDUAL"]);
+      showComment(complComment["CONDDUAL"]);
    }
    else if (comvar == 'condPair'){
-      showComment(complComment["ubCONDPAIR"]);
+      showComment(complComment["CONDPAIR"]);
    }
    else if (comvar == 'condSub'){
-      showComment(complComment["ubCONDSUB"]);
+      showComment(complComment["CONDSUB"]);
    }
    else if (comvar == 'condCond'){
-      showComment(complComment["ubCONDCOND"]);
+      showComment(complComment["CONDCOND"]);
    }
    else if (comvar == 'fullSamp'){
-      showComment(complComment["ubFULLSAMP"]);
+      showComment(complComment["FULLSAMP"]);
    }
    else if (comvar == 'fullDual'){
-      showComment(complComment["ubFULLDUAL"]);
+      showComment(complComment["FULLDUAL"]);
    }
    else if (comvar == 'fullPair'){
-      showComment(complComment["ubFULLPAIR"]);
+      showComment(complComment["FULLPAIR"]);
    }
    else if (comvar == 'fullSub'){
-      showComment(complComment["ubFULLSUB"]);
+      showComment(complComment["FULLSUB"]);
    }
    else if (comvar == 'fullCond'){
-      showComment(complComment["ubFULLCOND"]);
+      showComment(complComment["FULLCOND"]);
    }
 }
 

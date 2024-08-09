@@ -9,8 +9,8 @@ TBox_2IsTv = inp_2[0]
 TBox_2IsInfty = inp_2[1]
 TBox_2IsZero = inp_2[2]
 
-TBox_3IsUB = inp_3[0]
-TBox_3IsLB = inp_3[1]
+TBox_3IsLB = inp_3[0]
+TBox_3IsUB = inp_3[1]
 
 
 // // server :
@@ -25,7 +25,7 @@ if (TBox_3IsUB)
 if (TBox_1IsZero && TBox_2IsTv)
 {
     SAMPSAMP = complexity["ubSAMPSAMP"];
-    SAMPSAMPRef = "See [" + batu2013testing + "]";
+    complComment["SAMPSAMP"] = "Follows from Theorem 1 of [" + batu2013testing + "].";
     DUALSAMP = complexity["ubDUALSAMP"];
     DUALSAMPRef = "Follows from above";
     PAIRSAMP = complexity["ubPAIRSAMP"];
@@ -73,8 +73,8 @@ if (TBox_1IsZero && TBox_2IsTv)
 
 if (TBox_1IsInfty && TBox_2IsTv)
 {
-    SAMPSAMP = 'samp-samp-INFTY';
-    SAMPSAMPRef = "See something";
+    SAMPSAMP = complexity["lbSAMPSAMP"];
+    complComment["SAMPSAMP"] = "Follows from Theorem 1 of [" + valiant2008testing + "].";
     DUALSAMP = 'eval-samp-INFTY';
     DUALDUAL = 'eval-eval-INFTY';
     PAIRSAMP = '';
@@ -104,8 +104,8 @@ else if (TBox_3IsLB)
 {
     if (TBox_1IsZero && TBox_2IsTv)
     {
-        SAMPSAMP = complexity["ubSAMPSAMP"];
-        SAMPSAMPRef = "See [" + batu2013testing + "]";
+        SAMPSAMP = complexity["lbSAMPSAMP"];
+        complComment["SAMPSAMP"] = "Follows from [" + valiant2008testing + "]";
         DUALSAMP = complexity["ubDUALSAMP"];
         DUALSAMPRef = "Follows from above";
         PAIRSAMP = complexity["ubPAIRSAMP"];
