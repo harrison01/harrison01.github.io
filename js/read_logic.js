@@ -4,7 +4,13 @@ function checkedindex(radiobaton)
 }
 
 function checkedvalue(radiobaton)
-{ return radiobaton[checkedindex(radiobaton)].value;
+{ 
+  if (radiobaton.length > 1){
+    return radiobaton[checkedindex(radiobaton)].value;
+  }
+  else{
+    return radiobaton.value;
+  }
 }
 
 var Dunno='<span style=\"font-family:Times New Roman;font-size:16pt\" '+

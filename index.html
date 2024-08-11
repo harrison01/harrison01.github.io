@@ -97,11 +97,11 @@ Note: the information here is (always) incomplete and
                                 <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB1" value="Tv_1"> \(d_{TV}\) 
                         </span></div></span></label></td>
                 </tr>
-               <tr class="hl">
+               <!-- <tr class="hl">
                         <td><label for="TB2"><span><div><span class="nobr">
                                 <input onClick="ShowAll()" type=radio name="TBoxOpt_1" id="TB2" value="Infty_1"> \(d_{\infty}\)
                         </span></div></span></label></td>
-                </tr>
+                </tr> -->
 
 		<tr class="hl">
                         <td><label for="TB3"><span><div><span class="nobr">
@@ -125,19 +125,17 @@ Note: the information here is (always) incomplete and
 				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB1" value="Tv_2" checked> \(d_{TV}\)
 			</span></div></span></label></td>
 	        </tr>
-                <tr class="hl">
-	
+                <!-- <tr class="hl">
 			<td><label for="TB2"><span><div><span class="nobr">
 				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB2" value="Infty_2"> \(d_{\infty}\)
 			</span></div></span></label></td>
 		
-                </tr>
-                <tr class="hl">
-
+                </tr> -->
+                <!-- <tr class="hl">
 			<td><label for="TB3"><span><div><span class="nobr">
 				<input onClick="ShowAll()" type=radio name="TBoxOpt_2" id="TB3" value="Hellinger_2"> \(d_H\)
 			</span></div></span></label></td>
-		</tr>
+		</tr> -->
 		</td>
                 </tbody>
                 </table>
@@ -286,7 +284,7 @@ Guy Kawasaki<br> "The Macintosh Way"
 </div>
 
 <!-- ======================================= NOTES ============================== -->
-<!--
+
  <hr width="99%">
 
 <table border="0" cellspacing="0" cellpadding="0" width="99%">
@@ -294,124 +292,13 @@ Guy Kawasaki<br> "The Macintosh Way"
 <div style="margin-left:11pt;"><b>Notes:</b></div>
 <ol style="margin-top:5pt;margin-right:10pt;font-size:10pt;text-align:justify;">
 <li><a name="note1"></a>
-The letters
-<em class=small>O</em>, <em class=small>I</em>, and <em class=small>Q</em><sub>&nbsp;&nbsp;</sub>
-are customary written in various orders, e.g.,
-<em class=small>ALCQIO</em>, but <em class=small>SHOIQ</em><sub>&nbsp;</sub>.
-Here we do not reflect this tradition, but rather use a uniform naming scheme.
-
+The Total Variation distance \(d_{TV}\) between two probability distributions \(P\) and \(Q\) is defined as: \(d_{TV}(P, Q) = \frac{1}{2} \sum_{x} |P(x) - Q(x)|\)
 <li><a name="note2"></a>
-In literature, the letter <em class=small>F</em> sometimes stands for
-feature <span class="nobr">(dis)agreement</span> constructor
-(<span id="FRefer"></span>), rather than functionality
-(<span id="FNQRefer"></span>).
-
+The Support of a distribution is denoted by \(\Sigma\), and the Support size is denoted by \(N\), so that \(|\Sigma| = N\). For joint distributions on \(d\) dimensions, the Support is denoted by \(\Sigma^d\) and the corresponding Support size is \(N^d\).
 <li><a name="note3"></a>
-The presence of role intersection operator is sometimes indicated
-by the letter <em class=small>R</em><sub>&nbsp;&nbsp;</sub> in literature, e.g.
-<span class="nobr"><em class=small>ALCNR</em>&nbsp;:=&nbsp;<em class=small>ALCN</em>(&cap;)</span>.
-
-<li><a name="note4"></a>
-Transitive closure is usually denoted as <i>R</i><sup>+</sup>.
-The operators * and <sup>+</sup> are expressible in terms of each other via equalities:
-<span class="nobr"><i>R</i><sup>+</sup> = <i>R</i> o <i>R</i>*</span> and
-<span class="nobr"><i>R</i>* = <i>id</i>(T) &cup; <i>R</i><sup>+</sup></span>.
-Note however that the former definition is not linearly bounded.
-Therefore, any complexity result for a logic with <sup>+</sup> immediately implies
-the same result for a logic with (*,o), but not <i>vice versa</i>.
-
-<br><br><li><a name="note5"></a>
-In the selector "Allow/forbid complex roles in number restriction",
-a role (expression) is called <i>complex</i> if it contains any role operations
-<u>other</u> than inversion (i.e. inversion is harmless (with some rare exceptions,
-which are pointed out in the comments to those cases)).
-However, in literature it is usually hard or even impossible to determine whether
-this assumption holds by looking at the <i>name</i> of a logic.
-For&nbsp;instance, <em class=small>ALCQI</em><sub>reg</sub> usually abbreviates
-a logic where only role names and their inverses are allowed in number restrictions; whereas
-in the logic <em class=small>ALCN</em>(o),
-role composition is allowed in number restrictions.
-To&nbsp;avoid this ambiguity, the selector was introduced here explicitly.
-
-<br><br><li><a name="note6"></a>
-In Descripion Logics with <i>unqualified</i> number restrictions
-(<em class=small>N</em>), one can independently allow/forbid role operations
-in <i>value restrictions</i> (&exist;<i>R</i>.<i>C</i> and &forall;<i>R</i>.<i>C</i>)
-and/or in <i>number restrictions</i> (<span class="nobr">&ge;<i>n</i> <i>R</i></span>).
-Therefore, strictly speaking, the naming of logics should look like
-<em class=small>ALC</em>(&cup;,<sup>&ndash;</sup>)<em class=small>N</em>(&cup;,o).
-However, in our Navigator we are only able to display logics where role constructors
-are either allowed in both <i>value</i> and <i>number</i> restrictions,
-or in <i>value</i> restrictions only. What holds for the remaining case (if known)
-is usually said in comments.
-Note that this distinction is redundant for logics with <i>qualified</i> number
-restrictions&nbsp;<em class=small>Q</em>, since &exist;<i>R</i>.<i>C</i>
-can be expressed as <span class="nobr">&ge;<i>1</i>&nbsp;<i>R</i>.<i>C</i></span>.
-
-
-<br><br><li><a name="note7"></a>
-Recall that if <em>C</em> is a complexity class (e.g., PSpace or ExpTime), then a problem Q is said to be
-<u><i>in</i>&nbsp;<em>C</em></u> if there is an algorithm that belongs to the class <em>C</em>
-and solves the problem Q (so this is an <i>upper</i> bound for complexity). In particular, "decidable" is
-an upper bound; here <em>C</em> is the class of all decidable problems.
-A&nbsp;problem Q is called <u><em>C</em>-<i>hard</i></u> if all problems form the class <em>C</em> can be
-polynomially reduced to the problem Q (so this is a <i>lower</i> bound;
-in particular, the problem Q can be much harder, even <i>undecidable</i>!).
-Finally, a problem Q is called <u><em>C</em>-<i>complete</i></u> if it is both
-<em>C</em>-<i>hard</i> and in&nbsp;<em>C</em>. For more information on
-Computational Complexity Theory see&nbsp;[<span id="PapaRefer"></span>].
-
-
-<br><br><li><a name="note8"></a>
-The symbol <script type="text/javascript">document.write(Dunno);</script>
-in the above table means that the author of this web page did not find
-in the literature any results concerning the corresponding logic.
-If&nbsp;you have any information about that logic, the author would be grateful
-if you <a href="javascript:void(0);" title="Send me a mail!"
-onMouseOver="window.status='Send me a mail!';return true;"
-onMouseOut="window.status='';return true;" onClick="NoSpamMail('@');">send</a>
-him a mail with a reference. Sometimes, you can find out the desired
-complexity result using this tool by adding/removing some ingredients
-from the logic you consider, since it is <i>not</i> guaranteed that whenever
-this tool knows the complexity of two logics, and these complexities are the same,
-then it knows the complexity of all logics in between.
-As already pointed out, this tool is always
-<a style="color:blue" href="javascript:void(0);" title="What is beta?"
-onMouseOver="window.status='What is beta?';return true;"
-onMouseOut="window.status='';"
-onClick="ShowBeta();return false;">incomplete</a>
-and <a style="color:blue" title="Updates of the Navigator"
- href="news.html">updated</a> frequently.
-
+The query complexity of a distribution testing problem is the number of queries made by the algorithm to the distribution oracle to distinguish between the null hypothesis and the alternative hypothesis.
 </ol>
 </td></tr></table>
-
-<hr>
-<table border="0" cellspacing="0" cellpadding="0" width="99%">
-<tr><td>
-<div style="margin-left:11pt"><b>Additional sources</b></div>
-<ol style="margin-top:5pt;margin-right:10pt;font-size:11pt;text-align:justify">
-
-<li><a href="http://www.cs.man.ac.uk/~sattler/reasoners.html">Here</a>
-is the list of Description Logic reasoners,
-together with a description of their capabilities and links to their web page.
-Maintained by
-<a href="http://www.cs.man.ac.uk/~sattler/">Ulrike Sattler</a>.
-
-<li><a href="alc_to_shoiq.pdf">Here</a>
-you will find 6 diagrams depicting the complexity of
-concept satisfiability and ABox consistency problems
-for logics in between <em>ALC</em> and <em>SHOIQ</em>.
-There are some gaps (open problems?) in those diagrams!
-
-<li><a href="elimination_TBox_ABox.pdf">Here</a>
-you will find a description of how ABox can be eliminated
-in presence of nominals (i.e., in extensions of <em>ALCO</em>)
-and how TBox can be eliminated in extensions of <em>ALCIO</em>,
-<em>SH</em>, and <em>ALC</em>(&cup;,*).
-Proofs are missing (can be found in literature below).
-</ol>
-</td></tr></table> -->
 
 <!-- ======================================= REFERENCES ============================== -->
 
@@ -428,26 +315,27 @@ Proofs are missing (can be found in literature below).
 	Testing Closeness of Discrete Distributions
 </span>
 <span class="paper_link">
-			[ <a href="https://arxiv.org/abs/1009.5397">ArXiv</a> |
+			[ <a href="https://arxiv.org/abs/1009.5397">Paper</a> |
 			<script type="text/javascript">CreateAbstractBibTeXLinks('batu2013testing');</script> ]
 </span>
-<div class="bibtex" id="batu2013testing_bibtex">@article{batu2013testing,
-title={Testing closeness of discrete distributions},
-author={Batu, Tu{\u{g}}kan and Fortnow, Lance and Rubinfeld, Ronitt and 
-	Smith, Warren D and White, Patrick},
-journal={Journal of the ACM (JACM)},
-volume={60},
-number={1},
-pages={1--25},
-year={2013},
-publisher={ACM New York, NY, USA}
-}</div>
+<div class="bibtex" id="batu2013testing_bibtex">
+        @article{batu2013testing,
+        title={Testing closeness of discrete distributions},
+        author={Batu, Tu{\u{g}}kan and Fortnow, Lance and Rubinfeld, Ronitt and 
+                Smith, Warren D and White, Patrick},
+        journal={Journal of the ACM (JACM)},
+        volume={60},
+        number={1},
+        pages={1--25},
+        year={2013},
+        publisher={ACM New York, NY, USA}
+        }</div>
 <div class="paper_authors">
-	<a href="http://www.maths.lse.ac.uk/personal/batu/">Tugkan Batu</a>,
-	<a href="https://lance.fortnow.com/">Lance Fortnow</a>,
-	<a href="https://people.csail.mit.edu/ronitt/">Ronitt Rubinfeld</a>,
-	<a href="">Warren D. Smith</a>,
-	<a href="">Patrick White</a>,
+        Tugkan Batu,
+        Lance Fortnow,
+        Ronitt Rubinfeld,
+        Warren D. Smith,
+        Patrick White
 </div>
 
 <li><script type="text/javascript">var valiant2017automatic; CreateRefLink('valiant2017automatic');</script>
@@ -455,22 +343,23 @@ publisher={ACM New York, NY, USA}
         An Automatic Inequality Prover and Instance Optimal Identity Testing
 </span>
 <span class="paper_link">
-                        [ <a href="http://theory.stanford.edu/~valiant/papers/instanceOpt.pdf">ArXiv</a> |
-                        <script type="text/javascript">CreateAbstractBibTeXLinks('valiant2017automatic');</script> ]
+        [ <a href="http://theory.stanford.edu/~valiant/papers/instanceOpt.pdf">Paper</a> |
+        <script type="text/javascript">CreateAbstractBibTeXLinks('valiant2017automatic');</script> ]
 </span>
-<div class="bibtex" id="valiant2017automatic_bibtex">@article{valiant2017automatic,
-title={An Automatic Inequality Prover and Instance Optimal Identity Testing},
-author    = {Gregory Valiant and
+<div class="bibtex" id="valiant2017automatic_bibtex">
+        @article{valiant2017automatic,
+        title={An Automatic Inequality Prover and Instance Optimal Identity Testing},
+        author    = {Gregory Valiant and
         Paul Valiant},
-journal={{SIAM} J. Comput.},
-volume    = {46},
-number    = {1},
-pages     = {429--455},
-year      = {2017}
-}</div>
+        journal={{SIAM} J. Comput.},
+        volume    = {46},
+        number    = {1},
+        pages     = {429--455},
+        year      = {2017}
+        }</div>
 <div class="paper_authors">
-        <a href="">Gregory Valiant</a>,
-        <a href="">Paul Valiant</a>,
+        Gregory Valiant,
+        Paul Valiant,
 </div>
 
 
@@ -479,10 +368,11 @@ year      = {2017}
         On Distribution Testing in the Conditional Sampling Model
 </span>
 <span class="paper_link">
-                        [ <a href="https://arxiv.org/pdf/2007.09895.pdf">ArXiv</a> |
-                        <script type="text/javascript">CreateAbstractBibTeXLinks('nar2020cond');</script> ]
+        [ <a href="https://arxiv.org/pdf/2007.09895.pdf">Paper</a> |
+        <script type="text/javascript">CreateAbstractBibTeXLinks('nar2020cond');</script> ]
 </span>
-<div class="bibtex" id="nar2020cond_bibtex">@article{narayanan2020distribution,
+<div class="bibtex" id="nar2020cond_bibtex">
+        @article{nar2020cond,
         author    = {Shyam Narayanan},
         title     = {Tolerant Distribution Testing in the Conditional Sampling Model},
         journal   = {CoRR},
@@ -490,100 +380,103 @@ year      = {2017}
         year      = {2020}
         }</div>
 <div class="paper_authors">
-        <a href="https://sites.google.com/view/shyamnarayanan/home">Shyam Narayanan</a>
+        Shyam Narayanan
 </div>
-        
-        
+
+
 <li><script type="text/javascript">var bc18; CreateRefLink('bc18');</script>
 <span class="paper_title">
         Property Testing of Joint Distributions using Conditional Samples
 </span>
 <span class="paper_link">
-                        [ <a href="https://arxiv.org/pdf/1702.01454v2.pdf">ArXiv</a> |
-                        <script type="text/javascript">CreateAbstractBibTeXLinks('bc18');</script> ]
+        [ <a href="https://arxiv.org/pdf/1702.01454v2.pdf">Paper</a> |
+        <script type="text/javascript">CreateAbstractBibTeXLinks('bc18');</script> ]
 </span>
-<div class="bibtex" id="bc18_bibtex">@article{bhattacharyya2018property,
+<div class="bibtex" id="bc18_bibtex">
+        @article{bhattacharyya2018property,
         author    = {Rishiraj Bhattacharyya and
-                     Sourav Chakraborty},
+        Sourav Chakraborty},
         title     = {Property Testing of Joint Distributions using Conditional Samples},
         journal   = {CoRR},
         volume    = {abs/1702.01454},
         year      = {2017}
-      }</div>
+        }</div>
 <div class="paper_authors">
-        <a href="https://rishirajb.github.io/">Rishiraj Bhattacharyya</a>,
-        <a href="https://www.isical.ac.in/~sourav/">Sourav Chakraborty</a>
+        Rishiraj Bhattacharyya,
+        Sourav Chakraborty
 </div>
 
 
 <li><script type="text/javascript">var canonne2017testing; CreateRefLink('canonne2017testing');</script>
-        <span class="paper_title">
-                Testing Bayesian Networks
-        </span>
-        <span class="paper_link">
-                                [ <a href="https://arxiv.org/pdf/1612.03156.pdf">ArXiv</a> |
-                                <script type="text/javascript">CreateAbstractBibTeXLinks('canonne2017testing');</script> ]
-        </span>
-        <div class="bibtex" id="canonne2017testing_bibtex">@inproceedings{canonne2017testing,
-                title={Testing bayesian networks},
-                author={Canonne, Cl{\'e}ment L and Diakonikolas, Ilias and Kane, Daniel M and Stewart, Alistair},
-                booktitle={Conference on Learning Theory},
-                pages={370--448},
-                year={2017},
-                organization={PMLR}
-              }</div>
-        <div class="paper_authors">
-                <a href="https://ccanonne.github.io/">Clement L. Canonne</a> ,
-                <a href="http://www.iliasdiakonikolas.org/"> Ilias Diakonikolas</a>,
-                <a href="https://cseweb.ucsd.edu/~dakane/"> Daniel M. Kane</a>,
-                <a href="">Alistair Stewart</a>
-        </div>
-                
+<span class="paper_title">
+        Testing Bayesian Networks
+</span>
+<span class="paper_link">
+        [ <a href="https://arxiv.org/pdf/1612.03156.pdf">Paper</a> |
+        <script type="text/javascript">CreateAbstractBibTeXLinks('canonne2017testing');</script> ]
+</span>
+<div class="bibtex" id="canonne2017testing_bibtex">
+        @inproceedings{canonne2017testing,
+        title={Testing bayesian networks},
+        author={Canonne, Cl{\'e}ment L and Diakonikolas, Ilias and Kane, Daniel M and Stewart, Alistair},
+        booktitle={Conference on Learning Theory},
+        pages={370--448},
+        year={2017},
+        organization={PMLR}     
+        }</div>
+<div class="paper_authors">
+        Clement L. Canonne,
+        Ilias Diakonikolas,
+        Daniel M. Kane,
+        Alistair Stewart
+</div>
+
 <li><script type="text/javascript">var canonne2015testing; CreateRefLink('canonne2015testing');</script>
-        <span class="paper_title">
-                Testing probability distributions using conditional samples
-        </span>
-        <span class="paper_link">
-                                [ <a href="https://arxiv.org/pdf/1211.2664/">ArXiv</a> |
-                                <script type="text/javascript">CreateAbstractBibTeXLinks('canonne2015testing');</script> ]
-        </span>
-        <div class="bibtex" id="canonne2015testing_bibtex">@article{canonne2015testing,
-                title={Testing probability distributions using conditional samples},
-                author={Canonne, Cl{\'e}ment L and Ron, Dana and Servedio, Rocco A},
-                journal={SIAM Journal on Computing},
-                volume={44},
-                number={3},
-                pages={540--616},
-                year={2015},
-                publisher={SIAM}
-              }</div>
-        <div class="paper_authors">
-                <a href="https://ccanonne.github.io/">Clement L. Canonne </a> ,
-                <a href="https://www.danaron.sites.tau.ac.il/"> Dana Ron</a>,
-                <a href="https://www.cs.columbia.edu/~rocco/"> Rocco A. Servedio</a>,
-        </div>
+<span class="paper_title">
+        Testing probability distributions using conditional samples
+</span>
+<span class="paper_link">
+        [ <a href="https://arxiv.org/pdf/1211.2664/">Paper</a> |
+        <script type="text/javascript">CreateAbstractBibTeXLinks('canonne2015testing');</script> ]
+</span>
+<div class="bibtex" id="canonne2015testing_bibtex">
+        @article{canonne2015testing,
+        title={Testing probability distributions using conditional samples},
+        author={Canonne, Cl{\'e}ment L and Ron, Dana}
+        volume={44},
+        number={3},
+        pages={540--616},
+        year={2015},
+        publisher={SIAM}        
+        }</div>
+<div class="paper_authors">
+        Clement L. Canonne,
+        Dana Ron,
+        Rocco A. Servedio
+</div>
 
 <li><script type="text/javascript">var chakraborty2013power; CreateRefLink('chakraborty2013power');</script>
         <span class="paper_title">
                 On the power of conditional samples in distribution testing
         </span>
         <span class="paper_link">
-                                [ <a href="https://arxiv.org/pdf/1210.8338.pdf">ArXiv</a> |
+                                [ <a href="https://arxiv.org/pdf/1210.8338.pdf">Paper</a> |
                                 <script type="text/javascript">CreateAbstractBibTeXLinks('chakraborty2013power');</script> ]
         </span>
-        <div class="bibtex" id="chakraborty2013power_bibtex">@inproceedings{chakraborty2013power,
-                title={On the power of conditional samples in distribution testing},
-                author={Chakraborty, Sourav and Fischer, Eldar and Goldhirsh, Yonatan and Matsliah, Arie},
-                booktitle={Proceedings of the 4th conference on Innovations in Theoretical Computer Science},
-                pages={561--580},
-                year={2013}
-              }</div>
-        <div class="paper_authors">
-                <a href="https://www.isical.ac.in/~sourav/">Sourav Chakraborty </a> ,
-                <a href=""> Eldar Fischer</a>,
-                <a href=""> Yonatan Goldhirsh</a>,
-                <a href="https://www.crocopotam.com/">Arie Matsliah</a>
-        </div>                
+        <div class="bibtex" id="chakraborty2013power_bibtex">
+        @inproceedings{chakraborty2013power,
+        title={On the power of conditional samples in distribution testing},
+        author={Chakraborty, Sourav and Fischer, Eldar and Goldhirsh, Yonatan and Matsliah, Arie},
+        booktitle={Proceedings of the 4th conference on Innovations in Theoretical Computer Science},
+        pages={561--580},
+        year={2013}
+        }</div>
+<div class="paper_authors">
+        Sourav Chakraborty,
+        Eldar Fischer,
+        Yonatan Goldhirsh,
+        Arie Matsliah
+</div>                
         
 
 <li><script type="text/javascript">var potescalable; CreateRefLink('potescalable');</script>
@@ -591,18 +484,19 @@ year      = {2017}
                 On Scalable Testing of Samplers
         </span>
         <span class="paper_link">
-                                [ <a href="https://openreview.net/pdf?id=qHs3qeaQjgl">OpenReview</a> |
+                                [ <a href="https://openreview.net/pdf?id=qHs3qeaQjgl">Paper</a> |
                                 <script type="text/javascript">CreateAbstractBibTeXLinks('potescalable');</script> ]
         </span>
-        <div class="bibtex" id="potescalable_bibtex">@inproceedings{potescalable,
-                title={On Scalable Testing of Samplers},
-                author={Pote, Yash and Meel, Kuldeep S},
-                booktitle={Advances in Neural Information Processing Systems}
-              }</div>
-        <div class="paper_authors">
-                <a href="https://yashpote.github.io/">Yash Pote</a> ,
-                <a href="https://www.crocopotam.com/">Kuldeep S. Meel</a>
-        </div>               
+        <div class="bibtex" id="potescalable_bibtex">
+        @inproceedings{potescalable,
+        title={On Scalable Testing of Samplers},
+        author={Pote, Yash and Meel, Kuldeep S},
+        booktitle={Advances in Neural Information Processing Systems}
+        }</div>
+<div class="paper_authors">
+        Yash Pote,
+        Kuldeep S. Meel
+</div>               
         
 <li><script type="text/javascript">var falahatgar2015faster; CreateRefLink('falahatgar2015faster');</script>
         <span class="paper_title">
@@ -612,45 +506,47 @@ year      = {2017}
                                 [ <a href="http://proceedings.mlr.press/v40/Falahatgar15.pdf">PMLR</a> |
                                 <script type="text/javascript">CreateAbstractBibTeXLinks('falahatgar2015faster');</script> ]
         </span>
-        <div class="bibtex" id="falahatgar2015faster_bibtex">@inproceedings{falahatgar2015faster,
-                title={Faster algorithms for testing under conditional sampling},
-                author={Falahatgar, Moein and Jafarpour, Ashkan and Orlitsky, Alon and Pichapati, Venkatadheeraj and Suresh, Ananda Theertha},
-                booktitle={Conference on Learning Theory},
-                pages={607--636},
-                year={2015},
-                organization={PMLR}
-                }</div>
-        <div class="paper_authors">
-                <a href="">Moein Falahatgar </a> ,
-                <a href="">Ashkan Jafarpour</a>,
-                <a href="">Alon Orlitsky</a>,
-                <a href="">Venkatadheeraj Pichapati</a>,
-                <a href="">Ananda Theertha Suresh</a>
-        </div>
-<li><script type="text/javascript">var bcpss2024testing; CreateRefLink('bcpss2024testing');</script>
+        <div class="bibtex" id="falahatgar2015faster_bibtex">
+        @inproceedings{falahatgar2015faster,
+        title={Faster algorithms for testing under conditional sampling},
+        author={Falahatgar, Moein and Jafarpour, Ashkan and Orlitsky, Alon and Pichapati, Venkatadheeraj and Suresh, Ananda Theertha},
+        booktitle={Conference on Learning Theory},
+        pages={607--636},
+        year={2015},
+        organization={PMLR}
+        }</div>
+<div class="paper_authors">
+        Moein Falahatgar,
+        Ashkan Jafarpour,
+        Alon Orlitsky,
+        Venkatadheeraj Pichapati,
+        Ananda Theertha Suresh
+</div>
+<li><script type="text/javascript">var bhattacharyya2024testing; CreateRefLink('bhattacharyya2024testing');</script>
         <span class="paper_title">
                 Testing Self-Reducible Samplers
         </span>
         <span class="paper_link">
-                                [ <a href="https://arxiv.org/pdf/2312.10999">ArXiv</a> |
-                                <script type="text/javascript">CreateAbstractBibTeXLinks('bcpss2024testing');</script> ]
+                                [ <a href="https://arxiv.org/pdf/2312.10999">Paper</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('bhattacharyya2024testing');</script> ]
         </span>
-        <div class="bibtex" id="bcpss2024testing_bibtex">@inproceedings{bhattacharyya2024testing,
-                title={Testing Self-Reducible Samplers},
-                author={Bhattacharyya, Rishiraj and Chakraborty, Sourav and Pote, Yash and Sarkar, Uddalok and Sen, Sayantan},
-                booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-                volume={38},
-                number={8},
-                pages={7952--7960},
-                year={2024}
-              }
+        <div class="bibtex" id="bhattacharyya2024testing_bibtex">
+        @inproceedings{bhattacharyya2024testing,
+        title={Testing Self-Reducible Samplers},
+        author={Bhattacharyya, Rishiraj and Chakraborty, Sourav and Pote, Yash and Sarkar, Uddalok and Sen, Sayantan},
+        booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+        volume={38},
+        number={8},
+        pages={7952--7960},
+        year={2024}
+        }
         </div>
         <div class="paper_authors">
-                <a href="">Rishiraj Bhattacharyya</a>,
-                <a href="">Sourav Chakraborty</Source></a>,
-                <a href="">Yash Pote</a>,
-                <a href="">Uddalok Sarkar</a>,
-                <a href="">Sayantan Sen</a>,
+                Rishiraj Bhattacharyya,
+                Sourav Chakraborty,
+                Yash Pote,
+                Uddalok Sarkar,
+                Sayantan Sen
         </div>
 
 <li><script type="text/javascript">var kumar2023tolerant; CreateRefLink('kumar2023tolerant');</script>
@@ -658,42 +554,110 @@ year      = {2017}
                 Tolerant Testing of High-Dimensional Samplers with Subcube Conditioning
         </span>
         <span class="paper_link">
-                                [ <a href="https://arxiv.org/pdf/2308.04264">ArXiv</a> |
+                                [ <a href="https://arxiv.org/pdf/2308.04264">Paper</a> |
                                 <script type="text/javascript">CreateAbstractBibTeXLinks('kumar2023tolerant');</script> ]
         </span>
-        <div class="bibtex" id="kumar2023tolerant_bibtex">@article{kumar2023tolerant,
-                title={Tolerant Testing of High-Dimensional Samplers with Subcube Conditioning},
-                author={Kumar, Gunjan and Meel, Kuldeep S and Pote, Yash},
-                journal={arXiv preprint arXiv:2308.04264},
-                year={2023}
-              }
+        <div class="bibtex" id="kumar2023tolerant_bibtex">
+        @article{kumar2023tolerant,
+        title={Tolerant Testing of High-Dimensional Samplers with Subcube Conditioning},
+        author={Kumar, Gunjan and Meel, Kuldeep S and Pote, Yash},
+        journal={arXiv preprint arXiv:2308.04264},
+        year={2023}
+        }
         </div>
         <div class="paper_authors">
-                <a href="">Gunjan Kumar</a>,
-                <a href="">Kuldeep S. Meel</Source></a>,
-                <a href="">Yash Pote</a>,
+                Gunjan Kumar,
+                Kuldeep S. Meel,
+                Yash Pote
         </div>
 
 <li><script type="text/javascript">var valiant2008testing; CreateRefLink('valiant2008testing');</script>
-                <span class="paper_title">
-                        Testing Symmetric Properties of Distributions
-                </span>
-                <span class="paper_link">
-                                        [ <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=379cf3319a55653fc9baf7489e0a4766c5c70a5f">ArXiv</a> |
-                                        <script type="text/javascript">CreateAbstractBibTeXLinks('valiant2008testing');</script> ]
-                </span>
-                <div class="bibtex" id="valiant2008testing_bibtex">@inproceedings{valiant2008testing,
-                        title={Testing symmetric properties of distributions},
-                        author={Valiant, Paul},
-                        booktitle={Proceedings of the fortieth annual ACM symposium on Theory of computing},
-                        pages={383--392},
-                        year={2008}
-                      }
-                </div>
-                <div class="paper_authors">
-                        <a href="">Paul valiant</a>,
-                </div>
-        
-        
-        
-                <div style="display: none;">
+        <span class="paper_title">
+                Testing Symmetric Properties of Distributions
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=379cf3319a55653fc9baf7489e0a4766c5c70a5f">Paper</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('valiant2008testing');</script> ]
+        </span>
+        <div class="bibtex" id="valiant2008testing_bibtex">
+        @inproceedings{valiant2008testing,
+        title={Testing symmetric properties of distributions},
+        author={Valiant, Paul},
+        booktitle={Proceedings of the fortieth annual ACM symposium on Theory of computing},
+        pages={383--392},
+        year={2008}
+        }
+        </div>
+        <div class="paper_authors">
+                Paul valiant
+        </div>
+<li><script type="text/javascript">var canonne2014testing; CreateRefLink('canonne2014testing');</script>
+        <span class="paper_title">
+                Testing probability distributions underlying aggregated data
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=379cf3319a55653fc9baf7489e0a4766c5c70a5f">Paper</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('canonne2014testing');</script> ]
+        </span>
+        <div class="bibtex" id="canonne2014testing_bibtex">
+        @inproceedings{canonne2014testing,
+        title={Testing probability distributions underlying aggregated data},
+        author={Canonne, Cl{\'e}ment and Rubinfeld, Ronitt},
+        booktitle={International Colloquium on Automata, Languages, and Programming},
+        pages={283--295},
+        year={2014},
+        organization={Springer}
+        }
+        </div>
+        <div class="paper_authors">
+                Clement Canonne, Ronitt Rubinfeld
+        </div>
+
+<li><script type="text/javascript">var jiao2018minimax; CreateRefLink('jiao2018minimax');</script>
+        <span class="paper_title">
+                Minimax Estimation of the L1 Distance
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://arxiv.org/pdf/1705.00807">Paper</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('jiao2018minimax');</script> ]
+        </span>
+        <div class="bibtex" id="jiao2018minimax_bibtex">
+        @article{jiao2018minimax,
+        title={Minimax estimation of the $ L\_ $\{$1$\}$ $ distance},
+        author={Jiao, Jiantao and Han, Yanjun and Weissman, Tsachy},
+        journal={IEEE Transactions on Information Theory},
+        volume={64},
+        number={10},
+        pages={6672--6706},
+        year={2018},
+        publisher={IEEE}
+        }
+        </div>
+        <div class="paper_authors">
+                Jiantao Jiao, Yanjun Han, Tsachy Weissman
+        </div>
+
+<li><script type="text/javascript">var chakraborty2024tight; CreateRefLink('chakraborty2024tight');</script>
+        <span class="paper_title">
+                Tight Lower Bound on Equivalence Testing in Conditional Sampling Model
+        </span>
+        <span class="paper_link">
+                                [ <a href="https://arxiv.org/pdf/2308.11558">Paper</a> |
+                                <script type="text/javascript">CreateAbstractBibTeXLinks('chakraborty2024tight');</script> ]
+        </span>
+        <div class="bibtex" id="chakraborty2024tight_bibtex">
+        @inproceedings{chakraborty2024tight,
+        title={Tight lower bound on equivalence testing in conditional sampling model},
+        author={Chakraborty, Diptarka and Chakraborty, Sourav and Kumar, Gunjan},
+        booktitle={Proceedings of the 2024 Annual ACM-SIAM Symposium on Discrete Algorithms (SODA)},
+        pages={4371--4394},
+        year={2024},
+        organization={SIAM}
+        }
+        </div>
+        <div class="paper_authors">
+                Diptarka Chakraborty, Sourav Chakraborty, Gunjan Kumar
+        </div>
+
+
+        <div style="display: none;">

@@ -1,48 +1,26 @@
 var  // Output strings
 
 SAMPSAMP = '';
-// EVALSAMP = '';
-// EVALEVAL = '';
-// PRSAMP = '';
-// PREVAL = '';
-// PRPR = '';
 DUALSAMP = '';
-// DUALEVAL = '';
-// DUALPR = '';
 DUALDUAL = '';
 PAIRSAMP = '';
-// PAIREVAL = '';
-// PAIRPR = '';
 PAIRDUAL = '';
 PAIRPAIR = '';
 SUBSAMP = '';
-// SUBEVAL = '';
-// SUBPR = '';
 SUBDUAL = '';
 SUBPAIR = '';
 SUBSUB = '';
 CONDSAMP = '';
-// CONDEVAL = '';
-// CONDPR = '';
 CONDDUAL = '';
 CONDPAIR = '';
 CONDSUB = '';
 CONDCOND = '';
 FULLSAMP = '';
-// FULLEVAL = '';
-// FULLPR = '';
 FULLDUAL = '';
 FULLPAIR = '';
 FULLSUB = '';
 FULLCOND = '';
 FULLFULL = '';
-
-SAMPSAMPRef = '';
-DUALSAMPRef = '';
-FULLSAMPref = '';
-PAIRSAMPRef = '';
-SUBSAMPRef = '';
-CONDSAMPRef = '';
 
 var comvar = '';
 
@@ -128,41 +106,41 @@ function displayComments(){
 function DisplayResults()
 {
 
- ShowID('sampSamp',SAMPSAMP, SAMPSAMPRef);
+ ShowID('sampSamp',SAMPSAMP);
 //  ShowID('evalSamp',EVALSAMP);
 //  ShowID('evalEval',EVALEVAL);
 //  ShowID('prSamp',PRSAMP);
 //  ShowID('prEVAL',PREVAL);
 //  ShowID('prPr',PRPR);
- ShowID('dualSamp',DUALSAMP, DUALSAMPRef);
+ ShowID('dualSamp',DUALSAMP);
 //  ShowID('dualEval',DUALEVAL);
 //  ShowID('dualPr',DUALPR);
- ShowID('dualDual',DUALDUAL, DUALDUALRef);
- ShowID('pairSamp',PAIRSAMP,  PAIRSAMPRef);
+ ShowID('dualDual',DUALDUAL);
+ ShowID('pairSamp',PAIRSAMP);
 //  ShowID('pairEval',PAIREVAL);
 //  ShowID('pairPr',PAIRPR);
- ShowID('pairDual',PAIRDUAL, PAIRDUALRef);
- ShowID('pairPair',PAIRPAIR, PAIRPAIRRef);
- ShowID('subSamp',SUBSAMP, SUBSAMPRef);
+ ShowID('pairDual',PAIRDUAL);
+ ShowID('pairPair',PAIRPAIR);
+ ShowID('subSamp',SUBSAMP);
 //  ShowID('subEval',SUBEVAL);
 //  ShowID('subrPr',SUBPR);
- ShowID('subDual',SUBDUAL, SUBDUALRef);
- ShowID('subPair',SUBPAIR, SUBPAIRRef);
- ShowID('subSub',SUBSUB, SUBSUBRef);
- ShowID('condSamp',CONDSAMP, CONDSAMPRef);
+ ShowID('subDual',SUBDUAL);
+ ShowID('subPair',SUBPAIR);
+ ShowID('subSub',SUBSUB);
+ ShowID('condSamp',CONDSAMP);
 //  ShowID('condEval',CONDEVAL);
 //  ShowID('condPr',CONDPR);
- ShowID('condDual',CONDDUAL, CONDDUALRef);
- ShowID('condPair',CONDPAIR, CONDPAIRRef);
- ShowID('condSub',CONDSUB, CONDSUBRef);
- ShowID('condCond',CONDCOND, CONDCONDRef);
- ShowID('fullSamp',FULLSAMP, FULLSAMPref);
+ ShowID('condDual',CONDDUAL);
+ ShowID('condPair',CONDPAIR);
+ ShowID('condSub',CONDSUB);
+ ShowID('condCond',CONDCOND);
+ ShowID('fullSamp',FULLSAMP);
 //  ShowID('fullEval',FULLEVAL);
 //  ShowID('fullPr',FULLPR);
- ShowID('fullDual',FULLDUAL, FULLDUALRef);
- ShowID('fullPair',FULLPAIR, FULLPAIRRef);
- ShowID('fullSub',FULLSUB, FULLSUBRef);
- ShowID('fullCond',FULLCOND, FULLCONDRef);
+ ShowID('fullDual',FULLDUAL);
+ ShowID('fullPair',FULLPAIR);
+ ShowID('fullSub',FULLSUB);
+ ShowID('fullCond',FULLCOND);
 //  ShowID('fullFull',FULLFULL, 'todo');
 
 
@@ -181,35 +159,20 @@ function ShowComplexity(inp_1, inp_2, inp_3)
 function ShowAll()
 {
  inp = ReadInput();
-//  console.log(inp);
  ShowComplexity(inp[0], inp[1], inp[2]);
-
  displayComments();
- 
-//  const requestURL = './data.json';
-//   const request = new Request(requestURL);
-
-//   const response = fetch(request);
-//   const superHeroesText = response.text();
-  
-
-//   const superHeroes = JSON.parse(superHeroesText);
-//   console.log(superHeroes.squadName);
-//   populateHeroes(superHeroes);
 }
 
 
 function ShowBeta()
 {
 var WW=window.open('','WWname','width=200,height=200,resizable=yes');
-//WW.window.document.title='What is beta?';
 WW.window.document.write(
 '<html><head><title>What is beta?</title></head><body>'+
 '<div style="font-size:11pt;font-style:italic;text-align:right;">'+
 'The term "beta" is<br>an abbreviation for the phrase<br>"beta than nothing",'+
 '<br>which is exactly what<br>beta software is.<br><br>'+
 'Guy Kawasaki<br><a target="_blank" href="http://scribd.com/doc/68449509/The-Macintosh-Way-Guy-Kawasaki">"The Macintosh Way"</a></div></body></html>');
-
 }
 
 // ==================================================================================
@@ -221,12 +184,10 @@ WW.window.document.write(
 
 function GoToRef(VN)
 {
-// window.location.hash=VN;
 
    var currentURL = window.location.href;
        wherehash  = currentURL.lastIndexOf('#');
        newURL     = ( (wherehash>0)? currentURL.substring(0,wherehash) : currentURL ) +'#'+VN;
-//   window.location.replace(newURL);
    window.location.href=newURL;
 
 }
@@ -238,9 +199,6 @@ function CreateRefLink(VarName) // Creates a variable with this name and puts in
 
  NamingScheme = VarName+'_Anchor';
 
- // Old: eval(VarName+'=(++RefLabel)');
-
-// Simple:  eval(VarName+'= \'<a href=#'+NamingScheme+'>'+(++RefLabel)+'</a>\';');
 
  RefLabel++;
 
